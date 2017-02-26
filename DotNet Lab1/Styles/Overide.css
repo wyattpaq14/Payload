@@ -11,7 +11,7 @@ body {
 .btn {
    width: 100%;
 }
-#search {
+#cphSearch_txtSearch {
     position:relative;
     top:22px;
     width:200px;

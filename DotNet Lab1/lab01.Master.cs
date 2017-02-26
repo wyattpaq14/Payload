@@ -15,11 +15,7 @@ namespace DotNet_Lab1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            search.Attributes.Add("Placeholder", "Search Battle Tag");
-
             
-
-
 
             if (!IsPostBack)
             {
@@ -95,14 +91,6 @@ namespace DotNet_Lab1
         {
             Response.Redirect("~/Admin");
         }
-
-
-        public void lbSearch_Click(object sender, EventArgs e)
-        {
-            //Task.Run(() => { this.RunDemo(); }).Wait();
-            
-        }
-
 
 
 

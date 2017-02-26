@@ -16,6 +16,7 @@ namespace DotNet_Lab1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            txtSearch.Attributes.Add("Placeholder", "Search Battle Tag");
 
             txtHeros.Text = "";
 
@@ -61,13 +62,6 @@ namespace DotNet_Lab1
         {
             App_Code.TStream.AddStreamPoints(selectedStream);
             DisplayPopularStreams();
-            TextBox txttest = new TextBox();
-
-            txttest.Attributes["bgcolor"] = "lightblue";
-            txttest.Attributes["width"] = "200px";
-            txttest.Attributes["height"] = "200px";
-            txttest.Text = "hello world";
-            Panel1.Controls.Add(txttest);
             
         }
 
@@ -90,7 +84,7 @@ namespace DotNet_Lab1
         async Task RunDemo()
         {
 
-            OverwatchPlayer player = new OverwatchPlayer("Jorohara#21710");
+            OverwatchPlayer player = new OverwatchPlayer(txtSearch.Text);
 
             await player.DetectPlatform();
             await player.DetectRegionPC();

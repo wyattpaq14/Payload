@@ -1,5 +1,25 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/lab01.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DotNet_Lab1.Default" %>
+﻿<%@ Page Async="true" Title="" Language="C#" MasterPageFile="~/lab01.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DotNet_Lab1.Default" %>
 
+<asp:Content ID="cntSearch" ContentPlaceHolderID="cphSearch" runat="server">
+    <li>
+
+
+        <div class="input-field">
+
+            <asp:TextBox ID="txtSearch" runat="server" CssClass="white-text blue" TextMode="Search"></asp:TextBox>
+
+
+            <label class="label-icon" for="search"><i class="material-icons white-text">search</i></label>
+
+        </div>
+    </li>
+
+    <li>
+
+        <asp:LinkButton ID="lbSearch" runat="server" OnClick="btnExecuteAPI_Click"><i id="icoclose" class="material-icons white-text">play_arrow</i></asp:LinkButton>
+    </li>
+
+</asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--   Icon Section   -->
@@ -124,8 +144,8 @@
     <br />
     <br />
 
-    <asp:Button ID="btnExecuteAPI" runat="server" CssClass="btn" Text="Execute API Fetch" OnClick="btnExecuteAPI_Click" />
-    <br /><br />
+    <br />
+    <br />
     <asp:TextBox ID="txtHeros" runat="server" TextMode="MultiLine"></asp:TextBox>
 
 

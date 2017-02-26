@@ -30,24 +30,16 @@
             <div class="nav-wrapper container">
                 <a id="logo-container" href="#" class="brand-logo white-text">Payload</a>
                 <ul class="right hide-on-med-and-down">
-                    assaaaaaaaaaaaaaaaaaaaaaasas
-
-                    <li>
-
-                        <div class="input-field">
-                            <%--<input id="search" class="white-text blue" type="search" placeholder="Search Battle Tag">--%>
 
 
-                            <asp:TextBox ID="search" runat="server" CssClass="white-text blue" TextMode="Search"></asp:TextBox>
+
+                    <%--cph for search shit--%>
+                    <asp:ContentPlaceHolder ID="cphSearch" runat="server">
+                    </asp:ContentPlaceHolder>
 
 
-                            <label class="label-icon" for="search"><i class="material-icons white-text">search</i></label>
 
-                        </div>
 
-                    </li>
-                    <li>
-                        <asp:LinkButton ID="lbSearch" runat="server" OnClick="lbSearch_Click"><i id="icoclose" class="material-icons white-text">play_arrow</i></asp:LinkButton></li>
 
                     <li>
                         <asp:LinkButton ID="lbLoginState" runat="server" Text="asdf" OnClick="lbLoginState_Click" CssClass="white-text" /></li>
@@ -97,7 +89,7 @@
 
 
 
-                
+
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
 
@@ -129,7 +121,7 @@
                         <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
                         <h5 class="center">Speeds up development</h5>
 
-                        
+
                     </div>
                 </div>
 
