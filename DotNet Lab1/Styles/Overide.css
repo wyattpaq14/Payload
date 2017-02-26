@@ -1,0 +1,21 @@
+﻿nav {
+    position:fixed;
+    top: 0px;
+    z-index: 2;
+}
+
+body {
+    padding-top:75px;
+}
+
+.btn {
+   width: 100%;
+}
+#search {
+    position:relative;
+    top:22px;
+    width:200px;
+}
+
+
+
