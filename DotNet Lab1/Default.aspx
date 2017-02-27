@@ -160,7 +160,8 @@
             </div>
 
             <div class="col s1 valign-wrapper" style="height: 75px;">
-                <asp:Image ID="imgLevelBorder" runat="server" ImageUrl="~/Images/borderpic.png" Height="75px">65</asp:Image>
+                <asp:Image ID="imgLevelBorder" runat="server" ImageUrl="~/Images/borderpic.png" Height="75px"></asp:Image>
+                <asp:Panel ID="pnlLevelBorder" runat="server" ></asp:Panel>
 
                 
             </div>
