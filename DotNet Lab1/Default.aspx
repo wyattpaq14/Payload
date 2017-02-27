@@ -146,7 +146,54 @@
 
     <br />
     <br />
-    <asp:TextBox ID="txtHeros" runat="server" TextMode="MultiLine"></asp:TextBox>
 
+    <asp:TextBox ID="txtHeros" runat="server" Visible="false"></asp:TextBox>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col s1" style="height: 75px;">
+                <asp:Image ID="imgProfile" runat="server" ImageUrl="~/Images/pic.png" Height="75px" />
+            </div>
+            <div class="col s2 valign-wrapper" style="height: 75px;">
+                stickynote69
+            </div>
+
+            <div class="col s1 valign-wrapper" style="height: 75px;">
+                <asp:Image ID="imgLevelBorder" runat="server" ImageUrl="~/Images/borderpic.png" Height="75px">65</asp:Image>
+
+                
+            </div>
+
+            <div class="col s2" style="height: 75px;">
+                
+            </div>
+            <div class="col s6 valign-wrapper" style="height: 200px;">
+                hero img
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col ">
+            </div>
+            <div class="col ">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col ">
+            </div>
+            <div class="col ">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col ">
+            </div>
+            <div class="col ">
+            </div>
+        </div>
+
+    </div>
 
 </asp:Content>
