@@ -129,11 +129,13 @@
     <Content Include="Admin_Pages\Stream.aspx" />
     <Content Include="Admin_Pages\Streams.aspx" />
     <Content Include="Content\bootstrap-overide.css" />
+    <Content Include="Images\Downvote.png" />
     <Content Include="Images\background1.jpg" />
     <Content Include="Images\background2.jpg" />
     <Content Include="Images\background3.jpg" />
     <Content Include="Images\borderpic.png" />
     <Content Include="Images\dArrow.png" />
+    <Content Include="Images\Upvote.png" />
     <Content Include="Images\pic.png" />
     <Content Include="Images\uArrow.png" />
     <Content Include="packages.config" />

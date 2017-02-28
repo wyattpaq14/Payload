@@ -58,7 +58,7 @@ namespace DotNet_Lab1
         }
 
 
-        protected void btnUpvote_Click(object sender, EventArgs e)
+        protected void ibuttonUpvote_Click(object sender, EventArgs e)
         {
             App_Code.TStream.AddStreamPoints(selectedStream);
             DisplayPopularStreams();
@@ -68,7 +68,7 @@ namespace DotNet_Lab1
         
 
 
-        protected void btnDownVote_Click(object sender, EventArgs e)
+        protected void ibuttonDownvote_Click(object sender, EventArgs e)
         {
             App_Code.TStream.SubStreamPoints(selectedStream);
             DisplayPopularStreams();

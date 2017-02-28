@@ -94,22 +94,22 @@ namespace DotNet_Lab1 {
         protected global::System.Web.UI.WebControls.Button btnStream6;
         
         /// <summary>
-        /// btnUpvote control.
+        /// ibuttonUpvote control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpvote;
+        protected global::System.Web.UI.WebControls.ImageButton ibuttonUpvote;
         
         /// <summary>
-        /// btnDownVote control.
+        /// ImageButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDownVote;
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
         
         /// <summary>
         /// hfStreamName control.

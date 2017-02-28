@@ -75,10 +75,14 @@
 
             <div class="col l4">
                 <div class="row">
-                    <asp:Button ID="btnUpvote" runat="server" Text="Upvote" CssClass="waves-effect waves-light btn" OnClick="btnUpvote_Click" />
+                     <div class="col s4"> 
+                    <asp:ImageButton ID="ibuttonUpvote" runat="server" ImageUrl="~/Images/Upvote.png" OnClick="ibuttonUpvote_Click" Height="150px" Width="150px" />
+                         </div>
                 </div>
                 <div class="row">
-                    <asp:Button ID="btnDownVote" runat="server" Text="Downvote" CssClass="waves-effect waves-light btn red" OnClick="btnDownVote_Click" />
+                    <div class="col s4"> 
+                    <asp:ImageButton ID="ibuttonDownvote" runat="server" ImageUrl="~/Images/Downvote.png" Height="150px" Width="150px" />
+                    </div>
                 </div>
             </div>
         </div>
