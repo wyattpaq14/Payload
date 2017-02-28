@@ -21,6 +21,8 @@ body {
 .btn {
    width: 100%;
    font-size:25px;
+   height:50px;
+   padding-top:10px;
 
 }
 #cphSearch_txtSearch {
@@ -41,4 +43,8 @@ body {
 
 #logo-container {
     font-size:40px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #2196F3 inset;
 }

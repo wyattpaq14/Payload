@@ -27,7 +27,7 @@
         <div class="col m12">
             <div class="icon-block">
                 <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                <h5 class="center">Popular Streams</h5>
+                <h3 class="center">Popular Streams</h3>
 
 
             </div>
@@ -40,7 +40,7 @@
         <br />
         <div class="row">
             <div class="col l4">
-                <asp:Button ID="btnStream1" runat="server" Text="Stream 1" CssClass="waves-effect waves-light btn blue" OnClientClick="return false;" />
+                <asp:Button ID="btnStream1" runat="server" Text="Stream 1" CssClass="waves-effect waves-light btn blue valign" OnClientClick="return false;" />
             </div>
             <div class="col l4">
                 <asp:Button ID="btnStream2" runat="server" Text="Stream 2" CssClass="waves-effect waves-light btn blue" OnClientClick="return false;" />
