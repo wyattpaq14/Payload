@@ -1,7 +1,17 @@
-﻿nav {
+﻿@font-face {
+    font-family: 'bignoodletitlingoblique';
+    src: url('../Fonts/big_noodle_titling_oblique-webfont.woff2') format('woff2'),
+         url('../Fonts/big_noodle_titling_oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+nav {
     position:fixed;
     top: 0px;
     z-index: 2;
+    font-size:25px;
 }
 
 body {
@@ -10,6 +20,8 @@ body {
 
 .btn {
    width: 100%;
+   font-size:25px;
+
 }
 #cphSearch_txtSearch {
     position:relative;
@@ -17,5 +29,16 @@ body {
     width:200px;
 }
 
+.bignoodle {
+    font-family: 'bignoodletitlingoblique';
+    font-weight: normal;
+    font-style: normal;
+}
 
+#lbLoginState {
+    font-size:25px;
+}
 
+#logo-container {
+    font-size:40px;
+}

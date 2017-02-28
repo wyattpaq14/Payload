@@ -75,7 +75,7 @@
 
             <div class="col l4">
                 <div class="row">
-                    <asp:Button ID="btnUpvote" runat="server" Text="Upvote" CssClass="waves-effect waves-light btn" OnClick="btnUpvote_Click" />
+                    <asp:Button ID="btnUpvote" runat="server" Text="Upvote" CssClass="waves-effect waves-light btn bignoodle" OnClick="btnUpvote_Click" />
                 </div>
                 <div class="row">
                     <asp:Button ID="btnDownVote" runat="server" Text="Downvote" CssClass="waves-effect waves-light btn red" OnClick="btnDownVote_Click" />
@@ -155,7 +155,8 @@
             <div class="col s1" style="height: 75px;">
                 <asp:Image ID="imgProfile" runat="server" ImageUrl="~/Images/pic.png" Height="75px" />
             </div>
-            <div class="col s2 valign-wrapper" style="height: 75px;">
+
+            <div runat="server" id="divUser" class="col s2 valign-wrapper" style="height: 75px;">
                 stickynote69
             </div>
 

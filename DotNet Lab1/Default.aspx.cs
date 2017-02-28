@@ -12,6 +12,7 @@ namespace DotNet_Lab1
 {
     public partial class Default : System.Web.UI.Page
     {
+        public bool apiPull = false;
         public string selectedStream;
         public string[] heros = { "Ana", "Bastion", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "McCree", "Mei", "Mercy", "Pharah", "Reaper", "Reinhardt", "Roadhog",
             "Soldier76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta" };
@@ -80,7 +81,7 @@ namespace DotNet_Lab1
         {
             RegisterAsyncTask(new PageAsyncTask(RunDemo));
             Task.Run(RunDemo);
-            //new Task(new Default : System.Web.UI.Page.RunDemo).Start();
+
         }
 
         async Task RunDemo()
@@ -92,33 +93,50 @@ namespace DotNet_Lab1
             await player.DetectRegionPC();
             await player.UpdateStats();
 
-
-            WritePlayer(player);
-
-
+            if (!apiPull)
+            {
+                WritePlayer(player);
+            }
+            else
+            {
+                //do nothing
+            }
 
         }
 
         public void WritePlayer(OverwatchPlayer player)
         {
             string heroName = "Dva";
-            int controlCounter = 1;
+
             //txtHeros.Text += "Username: " + player.Username + " Platform: " + player.Platform + " Level: " + player.PlayerLevel + " Rank: " + player.CompetitiveRank;
             //txtHeros.Text += "\n---------------------------\n";
             //txtHeros.Text += "\nPlayer Portrait: " + player.ProfilePortraitURL;
             //txtHeros.Text += "\n---------------------------\n";
             //txtHeros.Text += "\nCasual Stats";
             //txtHeros.Text += "\n---------------------------\n";
+
+            //set profile pic
+
+            imgProfile.ImageUrl = player.ProfilePortraitURL;
+
+            //set profile username
+
+            divUser.InnerHtml = player.Username;
+
             var asdf = player.CasualStats.GetHero(heroName).GetCategory("Hero Specific");
             try
             {
+                for (int i = 0; i < asdf.Count; i++)
+                {
+                    txtHeros.Text += " I: " + i;
+                }
                 foreach (var item in asdf)
                 {
                     txtHeros.Text += item.Name + " : " + item.Value + "\n";
-                    //txtHeros.Text += player.CasualStats.GetHero(heroName).GetCategory("Hero Specific").Count + "\n";
-                    //pnlCasualRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+                    txtHeros.Text += player.CasualStats.GetHero(heroName).GetCategory("Hero Specific").Count + "\n";
+                    pnlCasualRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
                 }
-                txtHeros.Text += player.CasualStats.GetHero(heroName).GetCategory("Hero Specific").Count + "\n";
+
             }
             catch (NullReferenceException)
             {
@@ -150,7 +168,7 @@ namespace DotNet_Lab1
             }
 
             //txtHeros.Text += "\n---------------------------\n";
-
+            apiPull = true;
         }
     }
 }
