@@ -247,6 +247,40 @@ namespace DotNet_Lab1.App_Code
         }
 
 
+        public static bool InsertUser(User usr)
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["SQL Server"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("createNewUser", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@UserRank", SqlDbType.Int).Value = usr.UserRank;
+            cmd.Parameters.Add("@UserEmail", SqlDbType.VarChar).Value = usr.UserEmail;
+            cmd.Parameters.Add("@UserSalt", SqlDbType.VarChar).Value = usr.UserSalt;
+            cmd.Parameters.Add("@UserIsAdmin", SqlDbType.Bit).Value = usr.UserIsAdmin;
+            cmd.Parameters.Add("@UserIsBanned", SqlDbType.Bit).Value = usr.UserIsBanned;
+            cmd.Parameters.Add("@UserHashedPw", SqlDbType.VarChar).Value = usr.UserHashedPw;
+
+
+
+
+            try
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception exc)
+            {
+                exc.ToString();
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return false;
+        }
+
         public static bool UpdateUserInfo(User user)
         {
 

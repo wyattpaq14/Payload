@@ -2,12 +2,12 @@
 
 <asp:Content ID="loginForms" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <%--username validator, textbox and label--%>
+    <%--email validator, textbox and label--%>
     <div class="form-group col-lg-8 col-md-offset-2">
-        <asp:Label ID="lblUsername" runat="server" Text="Username" CssClass="col-lg-2 control-label"></asp:Label>
+        <asp:Label ID="lblEmail" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
         <div class="col-lg-10">
-            <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rfvUsername" runat="server" Display="None" ControlToValidate="txtUsername" ErrorMessage="Username is required"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="rfvEmail" runat="server" Display="None" ControlToValidate="txtEmail" ErrorMessage="Username is required"></asp:RequiredFieldValidator>
         </div>
     </div>
     <br />
@@ -24,8 +24,9 @@
     </div>
     <br />
     <br />
-    <asp:Button ID="btnLogin" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Login" OnClick="btnLogin_Click" />
-    <asp:Button ID="btnForgotPassword" runat="server" CssClass="col-lg-4 btn btn-default" Text="Forgot Password" />
+    <asp:Button ID="btnLogin" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Login" OnClick="btnLogin_Click" /><br />
+    <asp:Button ID="btnForgotPassword" runat="server" CssClass="col-lg-4 btn btn-default" Text="Forgot Password" /> <br />
+    <asp:LinkButton ID="lbNewUser" runat="server" CssClass="col-lg-4 btn btn-default" PostBackUrl="~/Home/Register" CausesValidation="false">Sign Up!</asp:LinkButton><br />
     <asp:ValidationSummary ID="vsForm" ShowSummary="true" ShowMessageBox="true" runat="server" />
 
 

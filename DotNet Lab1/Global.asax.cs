@@ -25,6 +25,7 @@ namespace DotNet_Lab1
             routes.MapPageRoute("Home", "Home", "~/Default.aspx");
             routes.MapPageRoute("Sign-In", "Home/Sign-In", "~/Pages/Login.aspx");
             routes.MapPageRoute("Admin-Panel", "Admin", "~/Admin_Pages/Admin.aspx");
+            routes.MapPageRoute("Register", "Home/Register", "~/Pages/Register.aspx");
 
 
 

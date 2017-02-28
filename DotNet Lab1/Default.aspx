@@ -147,7 +147,7 @@
     <br />
     <br />
 
-    <asp:TextBox ID="txtHeros" runat="server" Visible="false"></asp:TextBox>
+    <asp:TextBox ID="txtHeros" runat="server" Visible="true" TextMode="MultiLine" Height="600px"></asp:TextBox>
 
     <div class="container">
 
@@ -161,37 +161,77 @@
 
             <div class="col s1 valign-wrapper" style="height: 75px;">
                 <asp:Image ID="imgLevelBorder" runat="server" ImageUrl="~/Images/borderpic.png" Height="75px"></asp:Image>
-                <asp:Panel ID="pnlLevelBorder" runat="server" ></asp:Panel>
+                <asp:Panel ID="pnlLevelBorder" runat="server"></asp:Panel>
 
-                
+
             </div>
 
             <div class="col s2" style="height: 75px;">
-                
             </div>
             <div class="col s6 valign-wrapper" style="height: 200px;">
-                hero img
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/career-portrait.png" Height="200px"></asp:Image>
+            </div>
+
+
+        </div>
+
+        <h4>Casual Stats</h4>
+        <div class="row">
+            <div class="col s3 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 1
+            </div>
+
+            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 2
+            </div>
+
+            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 3
             </div>
         </div>
 
         <div class="row">
-            <div class="col ">
+            <div class="col s3 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 1
             </div>
-            <div class="col ">
+
+            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 2
+            </div>
+
+            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 3
+            </div>
+        </div>
+
+        <br />
+
+        <h4>Competitive Stats</h4>
+        <div class="row">
+            <div class="col s3 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 1
+            </div>
+
+            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 2
+            </div>
+
+            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 3
             </div>
         </div>
 
         <div class="row">
-            <div class="col ">
+            <div class="col s3 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 1
             </div>
-            <div class="col ">
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col ">
+            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 2
             </div>
-            <div class="col ">
+
+            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
+                stat 3
             </div>
         </div>
 

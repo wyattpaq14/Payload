@@ -20,7 +20,7 @@ namespace DotNet_Lab1.Pages
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            App_Code.User you = new App_Code.User(txtUsername.Text);
+            App_Code.User you = new App_Code.User(txtEmail.Text);
             string hsh = App_Code.User.CreatePasswordHash(you.UserSalt, txtPassword.Text);
 
             //check password
@@ -68,5 +68,6 @@ namespace DotNet_Lab1.Pages
             
         }
 
+     
     }
 }

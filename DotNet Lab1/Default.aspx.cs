@@ -13,7 +13,9 @@ namespace DotNet_Lab1
     public partial class Default : System.Web.UI.Page
     {
         public string selectedStream;
-
+        public string[] heros = { "Ana", "Bastion", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "McCree", "Mei", "Mercy", "Pharah", "Reaper", "Reinhardt", "Roadhog",
+            "Soldier76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta" };
+        public int[] hours = new int[23];
         protected void Page_Load(object sender, EventArgs e)
         {
             txtSearch.Attributes.Add("Placeholder", "Search Battle Tag");
@@ -31,7 +33,7 @@ namespace DotNet_Lab1
             }
             if (!IsPostBack)
             {
-
+                  
                 DisplayPopularStreams();
 
 
@@ -90,41 +92,54 @@ namespace DotNet_Lab1
             await player.DetectRegionPC();
             await player.UpdateStats();
 
-            //foreach (OverwatchPlayer player in playerCollection)
+            
             WritePlayer(player);
-            // txtHeros.Text += "Username: " + player.Username + " Platform: " + player.Platform + " Level: " + player.PlayerLevel + " Rank: " + player.CompetitiveRank;
+            
 
 
         }
 
         public void WritePlayer(OverwatchPlayer player)
         {
+            string heroName = "Dva";
             txtHeros.Text += "Username: " + player.Username + " Platform: " + player.Platform + " Level: " + player.PlayerLevel + " Rank: " + player.CompetitiveRank;
-            txtHeros.Text += "---------------------------\n\n";
-            txtHeros.Text += "Player Portrait: " + player.ProfilePortraitURL;
-            txtHeros.Text += "---------------------------\n\n";
-            txtHeros.Text += "Casual Stats";
-            txtHeros.Text += "---------------------------\n\n";
-            foreach (var item in player.CasualStats.GetHero("AllHeroes").GetCategory("Game"))
+            txtHeros.Text += "\n---------------------------\n";
+            txtHeros.Text += "\nPlayer Portrait: " + player.ProfilePortraitURL;
+            txtHeros.Text += "\n---------------------------\n";
+            txtHeros.Text += "\nCasual Stats";
+            txtHeros.Text += "\n---------------------------\n";
+            try
             {
-                txtHeros.Text += item.Name + " : " + item.Value;
+                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
+                    txtHeros.Text += "\n " + item.Name + " : " + item.Value + "\n";
+            }
+            catch (NullReferenceException)
+            {
+                //catches eexception thrown due to no time stats
             }
 
-            txtHeros.Text += "---------------------------\n\n";
-            txtHeros.Text += "Competitive Stats";
-            txtHeros.Text += "---------------------------\n\n";
-            foreach (var item in player.CompetitiveStats.GetHero("AllHeroes").GetCategory("Game"))
+            txtHeros.Text += "\n---------------------------\n";
+            txtHeros.Text += "\nCompetitive Stats \n";
+            txtHeros.Text += "\n---------------------------\n";
+            //foreach (var item in player.CompetitiveStats.GetHero("AllHeroes").GetCategory("Game"))
+            //{
+            //    txtHeros.Text += item.Name + " : " + item.Value;
+            //}
+
+            txtHeros.Text += "\n---------------------------\n";
+            txtHeros.Text += "\nGeneral Achievements: \n";
+            txtHeros.Text += "\n---------------------------\n";
+            try
             {
-                txtHeros.Text += item.Name + " : " + item.Value;
+                foreach (var item in player.Achievements.GetCategory("General"))
+                    txtHeros.Text += "\n " + item.Name + " : " + item.IsUnlocked + "\n";
+            }
+            catch (NullReferenceException)
+            {
+                //catches eexception thrown due to no time stats
             }
 
-            txtHeros.Text += "---------------------------\n\n";
-            txtHeros.Text += "General Achievements: ";
-            txtHeros.Text += "---------------------------\n\n";
-            foreach (var item in player.Achievements.GetCategory("General"))
-                txtHeros.Text += item.Name + " : " + item.IsUnlocked;
-
-            txtHeros.Text += "---------------------------\n\n";
+            txtHeros.Text += "\n---------------------------\n";
 
         }
     }
