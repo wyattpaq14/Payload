@@ -176,64 +176,24 @@
         </div>
 
         <h4>Casual Stats</h4>
-        <div class="row">
-            <div class="col s3 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 1
-            </div>
+        <asp:Panel ID="pnlCasual" runat="server">
+            <asp:Panel ID="pnlCasualRow1" runat="server" CssClass="row">
+            </asp:Panel>
 
-            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 2
-            </div>
-
-            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 3
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s3 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 1
-            </div>
-
-            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 2
-            </div>
-
-            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 3
-            </div>
-        </div>
+            <asp:Panel ID="pnlCasualRow2" runat="server" CssClass="row">
+            </asp:Panel>
+        </asp:Panel>
 
         <br />
 
         <h4>Competitive Stats</h4>
-        <div class="row">
-            <div class="col s3 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 1
-            </div>
+        <asp:Panel ID="pnlCompetitive" runat="server">
+            <asp:Panel ID="pnlCompetitiveRow1" runat="server" CssClass="row">
+            </asp:Panel>
 
-            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 2
-            </div>
-
-            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 3
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col s3 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 1
-            </div>
-
-            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 2
-            </div>
-
-            <div class="col s3 offset-s1 valign-wrapper" style="background-color: red; height: 100px;">
-                stat 3
-            </div>
-        </div>
+            <asp:Panel ID="pnlCompetitiveRow2" runat="server" CssClass="row">
+            </asp:Panel>
+        </asp:Panel>
 
     </div>
 

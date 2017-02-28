@@ -33,7 +33,7 @@ namespace DotNet_Lab1
             }
             if (!IsPostBack)
             {
-                  
+
                 DisplayPopularStreams();
 
 
@@ -64,10 +64,10 @@ namespace DotNet_Lab1
         {
             App_Code.TStream.AddStreamPoints(selectedStream);
             DisplayPopularStreams();
-            
+
         }
 
-        
+
 
 
         protected void btnDownVote_Click(object sender, EventArgs e)
@@ -92,9 +92,9 @@ namespace DotNet_Lab1
             await player.DetectRegionPC();
             await player.UpdateStats();
 
-            
+
             WritePlayer(player);
-            
+
 
 
         }
@@ -102,44 +102,54 @@ namespace DotNet_Lab1
         public void WritePlayer(OverwatchPlayer player)
         {
             string heroName = "Dva";
-            txtHeros.Text += "Username: " + player.Username + " Platform: " + player.Platform + " Level: " + player.PlayerLevel + " Rank: " + player.CompetitiveRank;
-            txtHeros.Text += "\n---------------------------\n";
-            txtHeros.Text += "\nPlayer Portrait: " + player.ProfilePortraitURL;
-            txtHeros.Text += "\n---------------------------\n";
-            txtHeros.Text += "\nCasual Stats";
-            txtHeros.Text += "\n---------------------------\n";
+            int controlCounter = 1;
+            //txtHeros.Text += "Username: " + player.Username + " Platform: " + player.Platform + " Level: " + player.PlayerLevel + " Rank: " + player.CompetitiveRank;
+            //txtHeros.Text += "\n---------------------------\n";
+            //txtHeros.Text += "\nPlayer Portrait: " + player.ProfilePortraitURL;
+            //txtHeros.Text += "\n---------------------------\n";
+            //txtHeros.Text += "\nCasual Stats";
+            //txtHeros.Text += "\n---------------------------\n";
+            var asdf = player.CasualStats.GetHero(heroName).GetCategory("Hero Specific");
             try
             {
-                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
-                    txtHeros.Text += "\n " + item.Name + " : " + item.Value + "\n";
+                foreach (var item in asdf)
+                {
+                    txtHeros.Text += item.Name + " : " + item.Value + "\n";
+                    //txtHeros.Text += player.CasualStats.GetHero(heroName).GetCategory("Hero Specific").Count + "\n";
+                    //pnlCasualRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+                }
+                txtHeros.Text += player.CasualStats.GetHero(heroName).GetCategory("Hero Specific").Count + "\n";
             }
             catch (NullReferenceException)
             {
                 //catches eexception thrown due to no time stats
             }
 
-            txtHeros.Text += "\n---------------------------\n";
-            txtHeros.Text += "\nCompetitive Stats \n";
-            txtHeros.Text += "\n---------------------------\n";
+            //txtHeros.Text += "\n---------------------------\n";
+            //txtHeros.Text += "\nCompetitive Stats \n";
+            //txtHeros.Text += "\n---------------------------\n";
             //foreach (var item in player.CompetitiveStats.GetHero("AllHeroes").GetCategory("Game"))
             //{
             //    txtHeros.Text += item.Name + " : " + item.Value;
             //}
 
-            txtHeros.Text += "\n---------------------------\n";
-            txtHeros.Text += "\nGeneral Achievements: \n";
-            txtHeros.Text += "\n---------------------------\n";
+            //txtHeros.Text += "\n---------------------------\n";
+            //txtHeros.Text += "\nGeneral Achievements: \n";
+            //txtHeros.Text += "\n---------------------------\n";
             try
             {
                 foreach (var item in player.Achievements.GetCategory("General"))
-                    txtHeros.Text += "\n " + item.Name + " : " + item.IsUnlocked + "\n";
+                {
+                    //txtHeros.Text += "\n " + item.Name + " : " + item.IsUnlocked + "\n";
+                }
+
             }
             catch (NullReferenceException)
             {
                 //catches eexception thrown due to no time stats
             }
 
-            txtHeros.Text += "\n---------------------------\n";
+            //txtHeros.Text += "\n---------------------------\n";
 
         }
     }
