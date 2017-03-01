@@ -116,10 +116,11 @@
             <div class="section">
                 <div class="col m12">
                     <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                        <h3 class="center">Speeds up development</h3>
+                        <h2 class="center brown-text"><i class="material-icons">list</i></h2>
+                        <h3 class="center">Player Statistics</h3>
 
-
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
                     </div>
                 </div>
 
@@ -216,10 +217,10 @@
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="../Scripts/materialize.js"></script>
         <script src="../Scripts/init.js"></script>
-
-        <script>
+        <link href="../Styles/Overide.css" type="text/css" rel="stylesheet" media="screen,projection" />
+        <%--<script>
             document.querySelector('body').style.fontFamily = "bignoodletitlingoblique";
-        </script>
+        </script>--%>
     </form>
 </body>
 </html>

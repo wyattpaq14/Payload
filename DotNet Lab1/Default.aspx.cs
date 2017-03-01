@@ -27,7 +27,6 @@ namespace DotNet_Lab1
         {
             txtSearch.Attributes.Add("Placeholder", "Search Battle Tag");
 
-            txtHeros.Text = "";
 
 
             try
@@ -112,7 +111,7 @@ namespace DotNet_Lab1
 
         public void WritePlayer(OverwatchPlayer player)
         {
-            
+
 
 
 
@@ -125,21 +124,69 @@ namespace DotNet_Lab1
             divUser.InnerHtml = player.Username;
 
             heroName = getTopHero(player);
-            
+
             try
             {
-                
+                //loop to output Casual Hero Speficifc Stats
                 foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
                 {
-                    
+
                     pnlCasualRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+                }
+
+
+            }
+            catch (NullReferenceException)
+            {
+                //catches eexception thrown due to heros that havent been used
+            }
+
+
+            try
+            {
+                //loop to output Casual Combat Stats
+                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Combat"))
+                {
+                    
+                    pnlCasualRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
                 }
 
             }
             catch (NullReferenceException)
             {
-                //catches eexception thrown due to no time stats
+                //catches eexception thrown due to heros that havent been used
             }
+
+            try
+            {
+                //loop to output Competitive Hero Specific Stats
+                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
+                {
+
+                    pnlCompetitiveRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+                }
+            }
+            catch (NullReferenceException)
+            {
+                //catches eexception thrown due to heros that havent been used
+            }
+
+            try
+            {
+                //loop to output Competitive Combat Stats
+                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Combat"))
+                {
+
+                    pnlCompetitiveRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+                }
+            }
+            catch (NullReferenceException)
+            {
+                //catches eexception thrown due to heros that havent been used
+            }
+
+
+
 
 
             apiPull = true;

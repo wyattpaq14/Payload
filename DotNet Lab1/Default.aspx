@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col m12">
             <div class="icon-block">
-                <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                <h2 class="center brown-text"><i class="material-icons">theaters</i></h2>
                 <h3 class="center">Popular Streams</h3>
 
 
@@ -147,10 +147,11 @@
     <br />
     <br />
 
-    <asp:TextBox ID="txtHeros" runat="server" Visible="true" TextMode="MultiLine" Height="600px"></asp:TextBox>
+</asp:Content>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div class="container">
-
+        <br /><br />
         <div class="row">
             <div class="col s1" style="height: 75px;">
                 <asp:Image ID="imgProfile" runat="server" ImageUrl="~/Images/pic.png" Height="75px" />
@@ -197,5 +198,6 @@
         </asp:Panel>
 
     </div>
+
 
 </asp:Content>

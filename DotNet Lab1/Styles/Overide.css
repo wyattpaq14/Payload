@@ -16,6 +16,7 @@ nav {
 
 body {
     padding-top:75px;
+    font-family:'bignoodletitlingoblique';
 }
 
 .btn {
@@ -31,11 +32,6 @@ body {
     width:200px;
 }
 
-.bignoodle {
-    font-family: 'bignoodletitlingoblique';
-    font-weight: normal;
-    font-style: normal;
-}
 
 #lbLoginState {
     font-size:25px;
@@ -45,3 +41,7 @@ body {
     font-size:40px;
 }
 
+#ContentPlaceHolder1_pnlCasualRow1, #ContentPlaceHolder1_pnlCasualRow2, #ContentPlaceHolder1_pnlCompetitiveRow1, #ContentPlaceHolder1_pnlCompetitiveRow2 {
+    font-family:'bignoodletitlingoblique';
+    font-size:20px;
+}
