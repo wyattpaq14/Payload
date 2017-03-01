@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
+using System.Linq;
 using System.Web.UI.WebControls;
 using System.Data;
 using OverwatchAPI;
@@ -16,7 +17,12 @@ namespace DotNet_Lab1
         public string selectedStream;
         public string[] heros = { "Ana", "Bastion", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "McCree", "Mei", "Mercy", "Pharah", "Reaper", "Reinhardt", "Roadhog",
             "Soldier76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta" };
-        public int[] hours = new int[23];
+
+        public double[] hours = new double[23];
+
+        public string heroName = "Ana";
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             txtSearch.Attributes.Add("Placeholder", "Search Battle Tag");
@@ -106,14 +112,9 @@ namespace DotNet_Lab1
 
         public void WritePlayer(OverwatchPlayer player)
         {
-            string heroName = "Dva";
+            
 
-            //txtHeros.Text += "Username: " + player.Username + " Platform: " + player.Platform + " Level: " + player.PlayerLevel + " Rank: " + player.CompetitiveRank;
-            //txtHeros.Text += "\n---------------------------\n";
-            //txtHeros.Text += "\nPlayer Portrait: " + player.ProfilePortraitURL;
-            //txtHeros.Text += "\n---------------------------\n";
-            //txtHeros.Text += "\nCasual Stats";
-            //txtHeros.Text += "\n---------------------------\n";
+
 
             //set profile pic
 
@@ -123,17 +124,14 @@ namespace DotNet_Lab1
 
             divUser.InnerHtml = player.Username;
 
-            var asdf = player.CasualStats.GetHero(heroName).GetCategory("Hero Specific");
+            heroName = getTopHero(player);
+            
             try
             {
-                for (int i = 0; i < asdf.Count; i++)
+                
+                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
                 {
-                    txtHeros.Text += " I: " + i;
-                }
-                foreach (var item in asdf)
-                {
-                    txtHeros.Text += item.Name + " : " + item.Value + "\n";
-                    txtHeros.Text += player.CasualStats.GetHero(heroName).GetCategory("Hero Specific").Count + "\n";
+                    
                     pnlCasualRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
                 }
 
@@ -143,32 +141,30 @@ namespace DotNet_Lab1
                 //catches eexception thrown due to no time stats
             }
 
-            //txtHeros.Text += "\n---------------------------\n";
-            //txtHeros.Text += "\nCompetitive Stats \n";
-            //txtHeros.Text += "\n---------------------------\n";
-            //foreach (var item in player.CompetitiveStats.GetHero("AllHeroes").GetCategory("Game"))
-            //{
-            //    txtHeros.Text += item.Name + " : " + item.Value;
-            //}
 
-            //txtHeros.Text += "\n---------------------------\n";
-            //txtHeros.Text += "\nGeneral Achievements: \n";
-            //txtHeros.Text += "\n---------------------------\n";
-            try
+            apiPull = true;
+        }
+
+        public string getTopHero(OverwatchPlayer player)
+        {
+
+            for (int i = 0; i < 22; i++)
             {
-                foreach (var item in player.Achievements.GetCategory("General"))
+                try
                 {
-                    //txtHeros.Text += "\n " + item.Name + " : " + item.IsUnlocked + "\n";
+                    hours[i] = Convert.ToDouble(player.CasualStats.GetHero(heros[i]).GetCategory("Game").GetStat("Time Played").Value / 60 / 60);
+                }
+                catch (NullReferenceException)
+                {
+
                 }
 
             }
-            catch (NullReferenceException)
-            {
-                //catches eexception thrown due to no time stats
-            }
+            int topHeroIndex = hours.ToList().IndexOf(Convert.ToInt32(hours.Max()));
 
-            //txtHeros.Text += "\n---------------------------\n";
-            apiPull = true;
+
+            return heros[topHeroIndex];
+
         }
     }
 }
