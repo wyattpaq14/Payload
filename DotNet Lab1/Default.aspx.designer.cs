@@ -148,22 +148,13 @@ namespace DotNet_Lab1 {
         protected global::System.Web.UI.WebControls.Image imgLevelBorder;
         
         /// <summary>
-        /// pnlLevelBorder control.
+        /// imgCareerPortrait control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlLevelBorder;
-        
-        /// <summary>
-        /// Image1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Image imgCareerPortrait;
         
         /// <summary>
         /// pnlCasual control.

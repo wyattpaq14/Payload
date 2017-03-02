@@ -163,7 +163,7 @@
 
             <div class="col s1 valign-wrapper" style="height: 75px;">
                 <asp:Image ID="imgLevelBorder" runat="server" ImageUrl="~/Images/borderpic.png" Height="75px"></asp:Image>
-                <asp:Panel ID="pnlLevelBorder" runat="server"></asp:Panel>
+                
 
 
             </div>
@@ -171,7 +171,7 @@
             <div class="col s2" style="height: 75px;">
             </div>
             <div class="col s6 valign-wrapper" style="height: 200px;">
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/career-portrait.png" Height="200px"></asp:Image>
+                <asp:Image ID="imgCareerPortrait" runat="server" ImageUrl="~/Images/career-portrait.png" Height="200px"></asp:Image>
             </div>
 
 

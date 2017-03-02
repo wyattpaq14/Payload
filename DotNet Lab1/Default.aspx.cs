@@ -125,6 +125,9 @@ namespace DotNet_Lab1
 
             heroName = getTopHero(player);
 
+            //https://blzgdapipro-a.akamaihd.net/hero/lucio/career-portrait.png
+
+            imgCareerPortrait.ImageUrl = "https://blzgdapipro-a.akamaihd.net/hero/" + heroName.ToLower() + "/career-portrait.png";
             try
             {
                 //loop to output Casual Hero Speficifc Stats
