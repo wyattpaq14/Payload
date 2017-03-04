@@ -8,7 +8,7 @@ using DotNet_Lab1.App_Code;
 
 namespace DotNet_Lab1.Admin_Pages
 {
-    public partial class Section : System.Web.UI.Page
+    public partial class Stream : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,12 +17,29 @@ namespace DotNet_Lab1.Admin_Pages
 
 
                 int streamID = Convert.ToInt32(RouteData.Values["StreamID"]);
-                TStream stream = new TStream(streamID);
 
-                txtStreamID.Text = stream.StreamID.ToString();
-                txtStreamName.Text = stream.StreamName;
-                txtStreamRank.Text = stream.StreamRank.ToString();
-                txtStreamIsBanned.Text = stream.StreamIsBanned.ToString();
+                if (streamID > 0)
+                {
+                    TStream stream = new TStream(streamID);
+
+                    txtStreamID.Text = stream.StreamID.ToString();
+                    txtStreamName.Text = stream.StreamName;
+                    txtStreamRank.Text = stream.StreamRank.ToString();
+                    txtStreamIsBanned.Text = stream.StreamIsBanned.ToString();
+
+                    lbInsert.Visible = false;
+
+                }
+                else if (streamID <= 0)
+                {
+                    txtStreamID.Enabled = false;
+                    txtStreamID.Visible = false;
+                    lblStreamID.Visible = false;
+                    txtStreamIsBanned.Text = "";
+                    txtStreamName.Text = "";
+                    txtStreamRank.Text = "";
+                    lbUpdate.Visible = false;
+                }
             }
         }
 
@@ -45,7 +62,33 @@ namespace DotNet_Lab1.Admin_Pages
 
             TStream.UpdateStreamInfo(s_stream);
 
+            Response.Redirect("~/Admin/Streams");
+        }
 
+        protected void lbInsert_Click(object sender, EventArgs e)
+        {
+            TStream s_stream = new TStream();
+
+            s_stream.StreamName = txtStreamName.Text;
+            s_stream.StreamRank = Convert.ToInt32(txtStreamRank.Text);
+            s_stream.StreamIsBanned = Convert.ToBoolean(txtStreamIsBanned.Text);
+
+
+
+            TStream.InsertStream(s_stream);
+
+            Response.Redirect("~/Admin/Streams");
         }
     }
+
+
+
+
+   
+
+
+
+
+
+
 }

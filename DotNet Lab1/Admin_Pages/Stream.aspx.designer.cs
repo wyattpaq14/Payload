@@ -10,7 +10,7 @@
 namespace DotNet_Lab1.Admin_Pages {
     
     
-    public partial class Section {
+    public partial class Stream {
         
         /// <summary>
         /// lblStreamID control.
@@ -112,13 +112,22 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStreamIsBanned;
         
         /// <summary>
-        /// btnUpdate control.
+        /// lbUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdate;
+        protected global::System.Web.UI.WebControls.LinkButton lbUpdate;
+        
+        /// <summary>
+        /// lbInsert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbInsert;
         
         /// <summary>
         /// btnCancel control.

@@ -43,7 +43,6 @@ namespace DotNet_Lab1
 
             //User Page
             routes.MapPageRoute("User", "Admin/User/{UserID}", "~/Admin_Pages/User.aspx", false, new RouteValueDictionary { { "UserID", "0" } });
-
             //Section Page
             routes.MapPageRoute("Stream", "Admin/Stream/{StreamID}", "~/Admin_Pages/Stream.aspx", false, new RouteValueDictionary { { "StreamID", "0" } });
 

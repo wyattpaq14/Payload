@@ -10,7 +10,7 @@
 namespace DotNet_Lab1.Admin_Pages {
     
     
-    public partial class MenuItems {
+    public partial class PlayerInfos {
         
         /// <summary>
         /// gvPlayerInfo control.

@@ -230,6 +230,42 @@ namespace DotNet_Lab1.App_Code
         }
 
 
+
+
+        public static bool InsertStream(TStream stream)
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["SQL Server"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("createNewStream", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@StreamName", SqlDbType.VarChar).Value = stream.StreamName;
+            cmd.Parameters.Add("@StreamRank", SqlDbType.Int).Value = stream.StreamRank;
+            cmd.Parameters.Add("@StreamIsBanned", SqlDbType.Bit).Value = stream.StreamIsBanned;
+
+
+
+
+            try
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception exc)
+            {
+                exc.ToString();
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return false;
+        }
+
+
+
+
         #endregion
     }
 }

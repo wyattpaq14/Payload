@@ -8,7 +8,7 @@ using DotNet_Lab1.App_Code;
 
 namespace DotNet_Lab1.Admin_Pages
 {
-    public partial class MenuItem : System.Web.UI.Page
+    public partial class PlayerInfo : System.Web.UI.Page
     {
 
 

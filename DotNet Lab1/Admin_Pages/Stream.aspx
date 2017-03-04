@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Stream.aspx.cs" Inherits="DotNet_Lab1.Admin_Pages.Section" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Stream.aspx.cs" Inherits="DotNet_Lab1.Admin_Pages.Stream" %>
 
 
-
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 
 <asp:Content ID="sectionForm" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -54,8 +55,9 @@
 
 
 
-    <asp:Button ID="btnUpdate" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Update" OnClick="btnUpdate_Click" />
-    <asp:Button ID="btnCancel" runat="server" CssClass="col-lg-4 btn btn-default" Text="Cancel" />
+    <asp:LinkButton ID="lbUpdate" runat="server" CssClass="btn" OnClick="btnUpdate_Click">Update Stream</asp:LinkButton><br />
+    <asp:LinkButton ID="lbInsert" runat="server" CssClass="btn" OnClick="lbInsert_Click">Insert Stream</asp:LinkButton><br />
+    <asp:Button ID="btnCancel" runat="server" CssClass="col-lg-4 btn btn-default" Text="Cancel" CausesValidation="false" />
     <asp:ValidationSummary ID="vsForm" ShowSummary="true" ShowMessageBox="true" runat="server" />
 
     <br />

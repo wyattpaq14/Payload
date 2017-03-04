@@ -1,4 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="PlayerInfo.aspx.cs" Inherits="DotNet_Lab1.Admin_Pages.MenuItem" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="PlayerInfo.aspx.cs" Inherits="DotNet_Lab1.Admin_Pages.PlayerInfo" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
 
 <asp:Content ID="menuItemForm" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 

@@ -10,7 +10,7 @@
 namespace DotNet_Lab1.Admin_Pages {
     
     
-    public partial class MenuItem {
+    public partial class PlayerInfo {
         
         /// <summary>
         /// lblUserID control.

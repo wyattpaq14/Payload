@@ -10,7 +10,16 @@
 namespace DotNet_Lab1.Admin_Pages {
     
     
-    public partial class Sections {
+    public partial class Streams {
+        
+        /// <summary>
+        /// btnNewStream control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNewStream;
         
         /// <summary>
         /// gvStreams control.

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="DotNet_Lab1.Admin_Pages.Sections" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="DotNet_Lab1.Admin_Pages.Users" %>
 
 
 
@@ -6,6 +6,9 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
+    <asp:Button ID="btnNewUser" runat="server" Text="New user" CssClass="btn" OnClick="btnNewUser_Click" />
 
 
     <asp:GridView ID="gvUsers" runat="server" AutoGenerateColumns="false" DataSourceID="sdsUsers" CssClass="responsive-table bordered">

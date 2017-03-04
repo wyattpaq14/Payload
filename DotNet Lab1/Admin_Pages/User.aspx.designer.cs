@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DotNet_Lab1.Pages {
+namespace DotNet_Lab1.Admin_Pages {
     
     
-    public partial class User {
+    public partial class User1 {
         
         /// <summary>
         /// lblUserID control.
@@ -56,6 +56,33 @@ namespace DotNet_Lab1.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserEmail;
+        
+        /// <summary>
+        /// lblUserPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUserPassword;
+        
+        /// <summary>
+        /// txtUserPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUserPassword;
+        
+        /// <summary>
+        /// rfvUserPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserPassword;
         
         /// <summary>
         /// lblUserRank control.
@@ -139,13 +166,22 @@ namespace DotNet_Lab1.Pages {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserIsAdmin;
         
         /// <summary>
-        /// btnUpdate control.
+        /// lbUpdate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdate;
+        protected global::System.Web.UI.WebControls.LinkButton lbUpdate;
+        
+        /// <summary>
+        /// lbInsert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbInsert;
         
         /// <summary>
         /// btnCancel control.

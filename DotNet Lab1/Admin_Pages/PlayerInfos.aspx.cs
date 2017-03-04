@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace DotNet_Lab1.Admin_Pages
 {
-    public partial class MenuItems : System.Web.UI.Page
+    public partial class PlayerInfos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

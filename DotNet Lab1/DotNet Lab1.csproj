@@ -130,6 +130,7 @@
     <Content Include="Admin_Pages\PlayerInfos.aspx" />
     <Content Include="Admin_Pages\Stream.aspx" />
     <Content Include="Admin_Pages\Streams.aspx" />
+    <Content Include="Admin_Pages\User.aspx" />
     <Content Include="Content\bootstrap-overide.css" />
     <Content Include="Images\background1.jpg" />
     <Content Include="Images\background2.jpg" />
@@ -165,7 +166,6 @@
     <Content Include="Global.asax" />
     <Content Include="Pages\ForgotPassword.aspx" />
     <Content Include="Pages\Login.aspx" />
-    <Content Include="Admin_Pages\User.aspx" />
     <Content Include="Admin_Pages\Users.aspx" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
@@ -226,6 +226,13 @@
     <Compile Include="Admin_Pages\Streams.aspx.designer.cs">
       <DependentUpon>Streams.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Pages\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Pages\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\app_user.cs" />
     <Compile Include="App_Code\PlayerInformation.cs" />
     <Compile Include="App_Code\User.cs" />
@@ -260,13 +267,6 @@
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin_Pages\User.aspx.cs">
-      <DependentUpon>User.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin_Pages\User.aspx.designer.cs">
-      <DependentUpon>User.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_Pages\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>

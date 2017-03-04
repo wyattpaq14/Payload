@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User.aspx.cs" MasterPageFile="~/Admin.Master" Inherits="DotNet_Lab1.Pages.User" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="DotNet_Lab1.Admin_Pages.User1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-
-<asp:Content ID="userForm" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <%--UserID validator, textbox and label--%>
     <div class="form-group col-lg-8 col-md-offset-2">
@@ -21,6 +21,17 @@
         <div class="col-lg-10">
             <asp:TextBox ID="txtUserEmail" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:RequiredFieldValidator ID="rfvUserEmail" runat="server" Display="None" ControlToValidate="txtUserEmail" ErrorMessage="User Email is required"></asp:RequiredFieldValidator>
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <%--UserPassword validator, textbox and label--%>
+    <div class="form-group col-lg-8 col-md-offset-2">
+        <asp:Label ID="lblUserPassword" runat="server" Text="User Password" CssClass="col-lg-2 control-label"></asp:Label>
+        <div class="col-lg-10">
+            <asp:TextBox ID="txtUserPassword" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="rfvUserPassword" runat="server" Display="None" ControlToValidate="txtUserPassword" ErrorMessage="User password is required"></asp:RequiredFieldValidator>
         </div>
     </div>
     <br />
@@ -62,11 +73,19 @@
 
 
 
-    <asp:Button ID="btnUpdate" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Update" OnClick="btnUpdate_Click" />
-    <asp:Button ID="btnCancel" runat="server" CssClass="col-lg-4 btn btn-default" Text="Cancel" CausesValidation="false" PostBackUrl="~/Home"/>
+
+    <asp:LinkButton ID="lbUpdate" runat="server" CssClass="btn" OnClick="lbUpdate_Click">Update User</asp:LinkButton><br />
+    <asp:LinkButton ID="lbInsert" runat="server" CssClass="btn" OnClick="lbInsert_Click">Insert User</asp:LinkButton><br />
+    <asp:Button ID="btnCancel" runat="server" CssClass="col-lg-4 btn btn-default" Text="Cancel" CausesValidation="false" PostBackUrl="~/Admin/Users" />
     <asp:ValidationSummary ID="vsForm" ShowSummary="true" ShowMessageBox="true" runat="server" />
 
     <br />
     <br />
+
+
+
+
+
+
 
 </asp:Content>

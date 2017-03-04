@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Streams.aspx.cs" Inherits="DotNet_Lab1.Admin_Pages.Sections" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Streams.aspx.cs" Inherits="DotNet_Lab1.Admin_Pages.Streams" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <asp:Button ID="btnNewStream" runat="server" Text="New Stream" CssClass="btn" OnClick="btnNewStream_Click" />
     <asp:GridView ID="gvStreams" runat="server" AutoGenerateColumns="false" DataSourceID="sdsStreams" CssClass="responsive-table bordered">
 
         <Columns>
