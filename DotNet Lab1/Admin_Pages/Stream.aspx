@@ -29,12 +29,12 @@
     <br />
     <br />
 
-    <%--Stream Rank validator, textbox and label--%>
+    <%--Stream Points validator, textbox and label--%>
     <div class="form-group col-lg-8 col-md-offset-2">
-        <asp:Label ID="lblStreamRank" runat="server" Text="Stream Rank" CssClass="col-lg-2 control-label"></asp:Label>
+        <asp:Label ID="lblStreamPoints" runat="server" Text="Stream Points" CssClass="col-lg-2 control-label"></asp:Label>
         <div class="col-lg-10">
-            <asp:TextBox ID="txtStreamRank" runat="server" CssClass="form-control"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rfvStreamRank" runat="server" Display="None" ControlToValidate="txtStreamRank" ErrorMessage="Stream Rank is required"></asp:RequiredFieldValidator>
+            <asp:TextBox ID="txtStreamPoints" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="rfvStreamPoints" runat="server" Display="None" ControlToValidate="txtStreamPoints" ErrorMessage="Stream Points is required"></asp:RequiredFieldValidator>
         </div>
     </div>
     <br />

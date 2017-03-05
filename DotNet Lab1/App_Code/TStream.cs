@@ -26,7 +26,7 @@ namespace DotNet_Lab1.App_Code
             {
                 this.StreamID = (int)dt.Rows[0]["StreamID"];
                 this.StreamName = dt.Rows[0]["StreamName"].ToString();
-                this.StreamRank = (int)dt.Rows[0]["StreamRank"];
+                this.StreamRank = (int)dt.Rows[0]["StreamPoints"];
                 this.StreamIsBanned = (bool)dt.Rows[0]["StreamIsBanned"];
             }
         }
@@ -197,7 +197,7 @@ namespace DotNet_Lab1.App_Code
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@StreamID", SqlDbType.Int).Value = stream.StreamID;
             cmd.Parameters.Add("@StreamName", SqlDbType.VarChar).Value = stream.StreamName;
-            cmd.Parameters.Add("@StreamRank", SqlDbType.Int).Value = stream.StreamRank;
+            cmd.Parameters.Add("@StreamPoints", SqlDbType.Int).Value = stream.StreamRank;
             cmd.Parameters.Add("@StreamIsBanned", SqlDbType.Bit).Value = stream.StreamIsBanned;
 
 
@@ -239,7 +239,7 @@ namespace DotNet_Lab1.App_Code
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@StreamName", SqlDbType.VarChar).Value = stream.StreamName;
-            cmd.Parameters.Add("@StreamRank", SqlDbType.Int).Value = stream.StreamRank;
+            cmd.Parameters.Add("@StreamPoints", SqlDbType.Int).Value = stream.StreamRank;
             cmd.Parameters.Add("@StreamIsBanned", SqlDbType.Bit).Value = stream.StreamIsBanned;
 
 

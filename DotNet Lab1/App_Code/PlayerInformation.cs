@@ -26,15 +26,7 @@ namespace DotNet_Lab1.App_Code
                 this.PlayerRank = (int)dt.Rows[0]["PlayerRank"];
                 this.UserID = (int)dt.Rows[0]["UserID"];
                 this.TopHero = dt.Rows[0]["TopHero"].ToString();
-                this.CompetitiveStat1 = (int)dt.Rows[0]["CompetitiveStat1"];
-                this.CompetitiveStat2 = (int)dt.Rows[0]["CompetitiveStat1"];
-                this.CompetitiveStat3 = (int)dt.Rows[0]["CompetitiveStat1"];
-                this.CasualStat1 = (int)dt.Rows[0]["CasualStat1"];
-                this.CasualStat2 = (int)dt.Rows[0]["CasualStat1"];
-                this.CasualStat3 = (int)dt.Rows[0]["CasualStat1"];
-                this.Avatar = dt.Rows[0]["Avatar"].ToString();
-                this.LevelBorder = dt.Rows[0]["LevelBorder"].ToString();
-                this.Emblem = dt.Rows[0]["Emblem"].ToString();
+                this.PlayTime = (int)dt.Rows[0]["PlayTime"];
                 this.BattleID = (int)dt.Rows[0]["BattleID"];
                 this.BattleTag = dt.Rows[0]["BattleTag"].ToString();
 
@@ -55,25 +47,11 @@ namespace DotNet_Lab1.App_Code
 
         public string TopHero { get; set; }
 
-        public double CompetitiveStat1 { get; set; }
-
-        public double CompetitiveStat2 { get; set; }
-
-        public double CompetitiveStat3 { get; set; }
-
-        public double CasualStat1 { get; set; }
-
-        public double CasualStat2 { get; set; }
-
-        public double CasualStat3 { get; set; }
-
         public int PlayerRank { get; set; }
 
-        public string Avatar { get; set; }
+        public int PlayTime { get; set; }
 
-        public string LevelBorder { get; set; }
 
-        public string Emblem { get; set; }
 
         #endregion
 
@@ -163,16 +141,8 @@ namespace DotNet_Lab1.App_Code
             cmd.Parameters.Add("@BattleTag", SqlDbType.VarChar).Value = player.BattleTag;
             cmd.Parameters.Add("@BattleID", SqlDbType.Int).Value = player.BattleID;
             cmd.Parameters.Add("@TopHero", SqlDbType.VarChar).Value = player.TopHero;
-            cmd.Parameters.Add("@CompetitiveStat1", SqlDbType.Int).Value = player.CompetitiveStat1;
-            cmd.Parameters.Add("@CompetitiveStat2", SqlDbType.Int).Value = player.CompetitiveStat2;
-            cmd.Parameters.Add("@CompetitiveStat3", SqlDbType.Int).Value = player.CompetitiveStat3;
-            cmd.Parameters.Add("@CasualStat1", SqlDbType.Int).Value = player.CasualStat1;
-            cmd.Parameters.Add("@CasualStat2", SqlDbType.Int).Value = player.CasualStat2;
-            cmd.Parameters.Add("@CasualStat3", SqlDbType.Int).Value = player.CasualStat3;
             cmd.Parameters.Add("@PlayerRank", SqlDbType.Int).Value = player.PlayerRank;
-            cmd.Parameters.Add("@Avatar", SqlDbType.VarChar).Value = player.Avatar;
-            cmd.Parameters.Add("@LevelBorder", SqlDbType.VarChar).Value = player.LevelBorder;
-            cmd.Parameters.Add("@Emblem", SqlDbType.VarChar).Value = player.Emblem;
+            cmd.Parameters.Add("@PlayTime", SqlDbType.Int).Value = player.PlayTime;
 
             // Open the database connection and execute the command
             try
@@ -238,7 +208,39 @@ namespace DotNet_Lab1.App_Code
 
 
 
+        public static bool InsertPlayerInfo(PlayerInformation playerinfo)
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["SQL Server"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("createNewPlayer", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            cmd.Parameters.Add("@UserID", SqlDbType.Int).Value = playerinfo.UserID;
+            cmd.Parameters.Add("@BattleTag", SqlDbType.VarChar).Value = playerinfo.BattleTag;
+            cmd.Parameters.Add("@BattleID", SqlDbType.Int).Value = playerinfo.BattleID;
+            cmd.Parameters.Add("@TopHero", SqlDbType.VarChar).Value = playerinfo.TopHero;
+            cmd.Parameters.Add("@PlayerRank", SqlDbType.Int).Value = playerinfo.PlayerRank;
+            cmd.Parameters.Add("@PlayTime", SqlDbType.Int).Value = playerinfo.PlayTime;
+
+
+
+
+            try
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception exc)
+            {
+                exc.ToString();
+
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return false;
+        }
 
         #endregion
     }

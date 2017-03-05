@@ -24,7 +24,7 @@ namespace DotNet_Lab1.Admin_Pages
 
                     txtStreamID.Text = stream.StreamID.ToString();
                     txtStreamName.Text = stream.StreamName;
-                    txtStreamRank.Text = stream.StreamRank.ToString();
+                    txtStreamPoints.Text = stream.StreamRank.ToString();
                     txtStreamIsBanned.Text = stream.StreamIsBanned.ToString();
 
                     lbInsert.Visible = false;
@@ -37,7 +37,7 @@ namespace DotNet_Lab1.Admin_Pages
                     lblStreamID.Visible = false;
                     txtStreamIsBanned.Text = "";
                     txtStreamName.Text = "";
-                    txtStreamRank.Text = "";
+                    txtStreamPoints.Text = "";
                     lbUpdate.Visible = false;
                 }
             }
@@ -55,7 +55,7 @@ namespace DotNet_Lab1.Admin_Pages
 
             s_stream.StreamID = Convert.ToInt32(txtStreamID.Text);
             s_stream.StreamName = txtStreamName.Text;
-            s_stream.StreamRank = Convert.ToInt32(txtStreamRank.Text);
+            s_stream.StreamRank = Convert.ToInt32(txtStreamPoints.Text);
             s_stream.StreamIsBanned = Convert.ToBoolean(txtStreamIsBanned.Text);
 
 
@@ -70,7 +70,7 @@ namespace DotNet_Lab1.Admin_Pages
             TStream s_stream = new TStream();
 
             s_stream.StreamName = txtStreamName.Text;
-            s_stream.StreamRank = Convert.ToInt32(txtStreamRank.Text);
+            s_stream.StreamRank = Convert.ToInt32(txtStreamPoints.Text);
             s_stream.StreamIsBanned = Convert.ToBoolean(txtStreamIsBanned.Text);
 
 

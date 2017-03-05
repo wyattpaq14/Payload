@@ -3,22 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <asp:Button ID="btnNewPlayerInfo" runat="server" Text="New Stream" CssClass="btn" OnClick="btnNewPlayerInfo_Click" />
     <asp:GridView ID="gvPlayerInfo" runat="server" AutoGenerateColumns="false" DataSourceID="sdsPlayerInfo" CssClass="responsive-table bordered">
 
         <Columns>
 
-            <asp:BoundField DataField="UserID" HeaderText="BattleTag" />
+            <asp:BoundField DataField="UserID" HeaderText="UserID" />
             <asp:BoundField DataField="BattleID" HeaderText="BattleTag" />
             <asp:BoundField DataField="BattleTag" HeaderText="BattleTag" />
             <asp:BoundField DataField="TopHero" HeaderText="Top Hero" />
             <asp:BoundField DataField="PlayerRank" HeaderText="Player Rank" />
-
-
-            <%--<asp:BoundField DataField="Avatar" HeaderText="Avatar" />
-            <asp:BoundField DataField="LevelBorder" HeaderText="Level Border" />
-            <asp:BoundField DataField="Emblem" HeaderText="Emblem" />--%>
-
+            <asp:BoundField DataField="PlayTime" HeaderText="Play Time" />
 
 
 

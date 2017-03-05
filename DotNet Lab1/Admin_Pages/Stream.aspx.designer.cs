@@ -58,31 +58,31 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStreamName;
         
         /// <summary>
-        /// lblStreamRank control.
+        /// lblStreamPoints control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStreamRank;
+        protected global::System.Web.UI.WebControls.Label lblStreamPoints;
         
         /// <summary>
-        /// txtStreamRank control.
+        /// txtStreamPoints control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStreamRank;
+        protected global::System.Web.UI.WebControls.TextBox txtStreamPoints;
         
         /// <summary>
-        /// rfvStreamRank control.
+        /// rfvStreamPoints control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStreamRank;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStreamPoints;
         
         /// <summary>
         /// lblStreamIsBanned control.

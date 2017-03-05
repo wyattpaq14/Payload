@@ -112,112 +112,13 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtTopHero;
         
         /// <summary>
-        /// lblCompetitiveStat1 control.
+        /// rfvTopHero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCompetitiveStat1;
-        
-        /// <summary>
-        /// txtCompetitiveStat1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCompetitiveStat1;
-        
-        /// <summary>
-        /// lblCompetitiveStat2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCompetitiveStat2;
-        
-        /// <summary>
-        /// txtCompetitiveStat2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCompetitiveStat2;
-        
-        /// <summary>
-        /// lblCompetitiveStat3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCompetitiveStat3;
-        
-        /// <summary>
-        /// txtCompetitiveStat3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCompetitiveStat3;
-        
-        /// <summary>
-        /// lblCasualStat1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCasualStat1;
-        
-        /// <summary>
-        /// txtCasualStat1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCasualStat1;
-        
-        /// <summary>
-        /// lblCasualStat2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCasualStat2;
-        
-        /// <summary>
-        /// txtCasualStat2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCasualStat2;
-        
-        /// <summary>
-        /// lblCasualStat3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCasualStat3;
-        
-        /// <summary>
-        /// txtCasualStat3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCasualStat3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTopHero;
         
         /// <summary>
         /// lblPlayerRank control.
@@ -238,58 +139,40 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtPlayerRank;
         
         /// <summary>
-        /// lblAvatar control.
+        /// rfvPlayerRank control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAvatar;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPlayerRank;
         
         /// <summary>
-        /// txtAvatar control.
+        /// lblPlayTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAvatar;
+        protected global::System.Web.UI.WebControls.Label lblPlayTime;
         
         /// <summary>
-        /// lblLevelBorder control.
+        /// txtPlayTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLevelBorder;
+        protected global::System.Web.UI.WebControls.TextBox txtPlayTime;
         
         /// <summary>
-        /// txtLevelBorder control.
+        /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtLevelBorder;
-        
-        /// <summary>
-        /// lblEmblem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmblem;
-        
-        /// <summary>
-        /// txtEmblem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmblem;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// btnUpdate control.
@@ -299,6 +182,15 @@ namespace DotNet_Lab1.Admin_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdate;
+        
+        /// <summary>
+        /// btnInsert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnInsert;
         
         /// <summary>
         /// btnCancel control.

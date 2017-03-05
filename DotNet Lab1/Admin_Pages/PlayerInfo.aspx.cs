@@ -19,23 +19,38 @@ namespace DotNet_Lab1.Admin_Pages
 
 
                 int battleID = Convert.ToInt32(RouteData.Values["BattleID"]);
-                PlayerInformation info = new PlayerInformation(battleID);
+
+                if (battleID > 0)
+                {
+                    PlayerInformation info = new PlayerInformation(battleID);
+
+                    btnInsert.Visible = false;
+                    txtUserID.Enabled = false;
+                    txtUserID.Visible = false;
+                    lblUserID.Visible = false;
 
 
-                txtAvatar.Text = info.Avatar;
-                txtBattleID.Text = info.BattleID.ToString();
-                txtBattleTag.Text = info.BattleTag;
-                txtCasualStat1.Text = info.CasualStat1.ToString();
-                txtCasualStat2.Text = info.CasualStat2.ToString();
-                txtCasualStat3.Text = info.CasualStat3.ToString();
-                txtCompetitiveStat1.Text = info.CompetitiveStat1.ToString();
-                txtCompetitiveStat2.Text = info.CompetitiveStat2.ToString();
-                txtCompetitiveStat3.Text = info.CompetitiveStat3.ToString();
-                txtEmblem.Text = info.Emblem;
-                txtLevelBorder.Text = info.LevelBorder;
-                txtPlayerRank.Text = info.PlayerRank.ToString();
-                txtTopHero.Text = info.TopHero;
-                txtUserID.Text = info.UserID.ToString();
+                    txtPlayTime.Text = info.PlayTime.ToString();
+                    txtBattleID.Text = info.BattleID.ToString();
+                    txtBattleTag.Text = info.BattleTag;
+                    txtPlayerRank.Text = info.PlayerRank.ToString();
+                    txtTopHero.Text = info.TopHero;
+                    txtUserID.Text = info.UserID.ToString();
+                }
+                else if (battleID <= 0)
+                {
+
+                    btnUpdate.Visible = false;
+                    txtPlayTime.Text = "";
+                    txtBattleID.Text = "";
+                    txtBattleTag.Text = "";
+                    txtPlayerRank.Text = "";
+                    txtTopHero.Text = "";
+                    txtUserID.Text = "";
+
+
+
+                }
 
             }
         }
@@ -50,17 +65,9 @@ namespace DotNet_Lab1.Admin_Pages
 
             PlayerInformation p_info = new PlayerInformation();
 
-            p_info.Avatar = txtAvatar.Text;
+            p_info.PlayTime = Convert.ToInt32(txtPlayTime.Text);
             p_info.BattleID = Convert.ToInt32(txtBattleID.Text);
             p_info.BattleTag = txtBattleTag.Text;
-            p_info.CasualStat1 = Convert.ToInt32(txtCasualStat1.Text);
-            p_info.CasualStat2 = Convert.ToInt32(txtCasualStat2.Text);
-            p_info.CasualStat3 = Convert.ToInt32(txtCasualStat3.Text);
-            p_info.CompetitiveStat1 = Convert.ToInt32(txtCompetitiveStat1.Text);
-            p_info.CompetitiveStat2 = Convert.ToInt32(txtCompetitiveStat2.Text);
-            p_info.CompetitiveStat3 = Convert.ToInt32(txtCompetitiveStat3.Text);
-            p_info.Emblem = txtEmblem.Text;
-            p_info.LevelBorder = txtLevelBorder.Text;
             p_info.PlayerRank = Convert.ToInt32(txtPlayerRank.Text);
             p_info.TopHero = txtTopHero.Text;
             p_info.UserID = Convert.ToInt32(txtUserID.Text);
@@ -71,6 +78,22 @@ namespace DotNet_Lab1.Admin_Pages
 
         }
 
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            PlayerInformation p_info = new PlayerInformation();
 
+            p_info.PlayTime = Convert.ToInt32(txtPlayTime.Text);
+            p_info.BattleID = Convert.ToInt32(txtBattleID.Text);
+            p_info.BattleTag = txtBattleTag.Text;
+            p_info.PlayerRank = Convert.ToInt32(txtPlayerRank.Text);
+            p_info.TopHero = txtTopHero.Text;
+            p_info.UserID = Convert.ToInt32(txtUserID.Text);
+
+
+
+            PlayerInformation.InsertPlayerInfo(p_info);
+
+            Response.Redirect("~/Admin/Streams");
+        }
     }
 }
