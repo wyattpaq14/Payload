@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Button ID="btnNewPlayerInfo" runat="server" Text="New Stream" CssClass="btn" OnClick="btnNewPlayerInfo_Click" />
+    <asp:Button ID="btnNewPlayerInfo" runat="server" Text="New Player" CssClass="btn" OnClick="btnNewPlayerInfo_Click" />
     <asp:GridView ID="gvPlayerInfo" runat="server" AutoGenerateColumns="false" DataSourceID="sdsPlayerInfo" CssClass="responsive-table bordered">
 
         <Columns>

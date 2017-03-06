@@ -27,21 +27,24 @@
 
 
 
-        <nav class="white" role="navigation">
+        <nav class="blue" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="#" class="brand-logo">Payload</a>
+                <a id="logo-container" href="#" class="brand-logo white-text">Payload</a>
                 <ul class="right hide-on-med-and-down">
+                    <li>
+                        <asp:LinkButton ID="lbHome" runat="server" Text="Home" OnClick="lbHome_Click" CssClass="white-text"></asp:LinkButton>
+                    </li>
+                    <li>
+                        <asp:LinkButton ID="lbStreams" runat="server" Text="Streams" OnClick="lbStreams_Click" CssClass="white-text"></asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton ID="lbUsers" runat="server" Text="Users" OnClick="lbUsers_Click" CssClass="white-text"></asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton ID="lbPlayerInfo" runat="server" Text="Players" OnClick="lbPlayerInfo_Click" CssClass="white-text"></asp:LinkButton></li>
+                    <li>
+                        <asp:LinkButton ID="lbLoginState" runat="server" Text="asdf" OnClick="lbLoginState_Click" CssClass="white-text" /></li>
+                    <li>
+                        <asp:LinkButton ID="lbAdminPanel" runat="server" OnClick="lbAdminPanel_Click" CssClass="white-text"></asp:LinkButton></li>
                     
-                    <li>
-                        <asp:LinkButton ID="lbStreams" runat="server" Text="Streams" OnClick="lbStreams_Click"></asp:LinkButton></li>
-                    <li>
-                        <asp:LinkButton ID="lbUsers" runat="server" Text="Users" OnClick="lbUsers_Click"></asp:LinkButton></li>
-                    <li>
-                        <asp:LinkButton ID="lbPlayerInfo" runat="server" Text="Players" OnClick="lbPlayerInfo_Click"></asp:LinkButton></li>
-                    <li>
-                        <asp:LinkButton ID="lbLoginState" runat="server" Text="asdf" OnClick="lbLoginState_Click" /></li>
-                    <li>
-                        <asp:LinkButton ID="lbAdminPanel" runat="server" OnClick="lbAdminPanel_Click"></asp:LinkButton></li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">

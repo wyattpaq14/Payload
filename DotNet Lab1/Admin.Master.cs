@@ -75,5 +75,10 @@ namespace DotNet_Lab1
         {
             Response.Redirect("~/Admin/Streams");
         }
+
+        protected void lbHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Home");
+        }
     }
 }

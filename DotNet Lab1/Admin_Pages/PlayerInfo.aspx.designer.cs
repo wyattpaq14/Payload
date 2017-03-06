@@ -31,15 +31,6 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtUserID;
         
         /// <summary>
-        /// rfvUserID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserID;
-        
-        /// <summary>
         /// lblBattleID control.
         /// </summary>
         /// <remarks>
@@ -56,15 +47,6 @@ namespace DotNet_Lab1.Admin_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBattleID;
-        
-        /// <summary>
-        /// rfvBattleID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBattleID;
         
         /// <summary>
         /// lblBattleTag control.
@@ -112,15 +94,6 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtTopHero;
         
         /// <summary>
-        /// rfvTopHero control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTopHero;
-        
-        /// <summary>
         /// lblPlayerRank control.
         /// </summary>
         /// <remarks>
@@ -139,15 +112,6 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtPlayerRank;
         
         /// <summary>
-        /// rfvPlayerRank control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPlayerRank;
-        
-        /// <summary>
         /// lblPlayTime control.
         /// </summary>
         /// <remarks>
@@ -164,15 +128,6 @@ namespace DotNet_Lab1.Admin_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPlayTime;
-        
-        /// <summary>
-        /// RequiredFieldValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// btnUpdate control.

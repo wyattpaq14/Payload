@@ -45,3 +45,7 @@ body {
     font-family:'bignoodletitlingoblique';
     font-size:20px;
 }
+
+#lbPlayerInfo, #lbUsers, #lbStreams, #lbHome, #lbAdminPanel {
+    font-size:25px;
+}

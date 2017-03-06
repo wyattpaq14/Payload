@@ -18,7 +18,7 @@ namespace DotNet_Lab1.Admin_Pages
 
         protected void btnNewPlayerInfo_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Admin/Player-Infos/" + null);
+            Response.Redirect("~/Admin/Player-Info/" + null);
         }
     }
 }
