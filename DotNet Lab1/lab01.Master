@@ -42,9 +42,9 @@
 
 
                     <li>
-                        <asp:LinkButton ID="lbLoginState" runat="server" Text="asdf" OnClick="lbLoginState_Click" CssClass="white-text" /></li>
+                        <asp:LinkButton ID="lbLoginState" runat="server" Text="asdf" OnClick="lbLoginState_Click" CssClass="white-text" CausesValidation="false" /></li>
                     <li>
-                        <asp:LinkButton ID="lbAdminPanel" runat="server" OnClick="lbAdminPanel_Click" CssClass="white-text"></asp:LinkButton></li>
+                        <asp:LinkButton ID="lbAdminPanel" runat="server" OnClick="lbAdminPanel_Click" CssClass="white-text" CausesValidation="false"></asp:LinkButton></li>
                 </ul>
 
 

@@ -49,3 +49,7 @@ body {
 #lbPlayerInfo, #lbUsers, #lbStreams, #lbHome, #lbAdminPanel {
     font-size:25px;
 }
+
+#ContentPlaceHolder2_imgHero {
+    height:300px;
+}

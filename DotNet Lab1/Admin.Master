@@ -32,18 +32,18 @@
                 <a id="logo-container" href="#" class="brand-logo white-text">Payload</a>
                 <ul class="right hide-on-med-and-down">
                     <li>
-                        <asp:LinkButton ID="lbHome" runat="server" Text="Home" OnClick="lbHome_Click" CssClass="white-text"></asp:LinkButton>
+                        <asp:LinkButton ID="lbHome" runat="server" Text="Home" OnClick="lbHome_Click" CssClass="white-text" CausesValidation="false"></asp:LinkButton>
                     </li>
                     <li>
-                        <asp:LinkButton ID="lbStreams" runat="server" Text="Streams" OnClick="lbStreams_Click" CssClass="white-text"></asp:LinkButton></li>
+                        <asp:LinkButton ID="lbStreams" runat="server" Text="Streams" OnClick="lbStreams_Click" CssClass="white-text" CausesValidation="false"></asp:LinkButton></li>
                     <li>
-                        <asp:LinkButton ID="lbUsers" runat="server" Text="Users" OnClick="lbUsers_Click" CssClass="white-text"></asp:LinkButton></li>
+                        <asp:LinkButton ID="lbUsers" runat="server" Text="Users" OnClick="lbUsers_Click" CssClass="white-text" CausesValidation="false"></asp:LinkButton></li>
                     <li>
-                        <asp:LinkButton ID="lbPlayerInfo" runat="server" Text="Players" OnClick="lbPlayerInfo_Click" CssClass="white-text"></asp:LinkButton></li>
+                        <asp:LinkButton ID="lbPlayerInfo" runat="server" Text="Players" OnClick="lbPlayerInfo_Click" CssClass="white-text" CausesValidation="false"></asp:LinkButton></li>
                     <li>
-                        <asp:LinkButton ID="lbLoginState" runat="server" Text="asdf" OnClick="lbLoginState_Click" CssClass="white-text" /></li>
+                        <asp:LinkButton ID="lbLoginState" runat="server" Text="asdf" OnClick="lbLoginState_Click" CssClass="white-text" CausesValidation="false" /></li>
                     <li>
-                        <asp:LinkButton ID="lbAdminPanel" runat="server" OnClick="lbAdminPanel_Click" CssClass="white-text"></asp:LinkButton></li>
+                        <asp:LinkButton ID="lbAdminPanel" runat="server" OnClick="lbAdminPanel_Click" CssClass="white-text" CausesValidation="false"></asp:LinkButton></li>
                     
                 </ul>
 

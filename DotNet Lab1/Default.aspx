@@ -150,54 +150,101 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <div class="container">
-        <br /><br />
+    <div class="container col s12">
+        <br />
+        <br />
         <div class="row">
-            <div class="col s1" style="height: 75px;">
-                <asp:Image ID="imgProfile" runat="server" ImageUrl="~/Images/pic.png" Height="75px" />
-            </div>
 
-            <div runat="server" id="divUser" class="col s2 valign-wrapper" style="height: 75px;">
-                stickynote69
-            </div>
-
-            <div class="col s1 valign-wrapper" style="height: 75px;">
-                <asp:Image ID="imgLevelBorder" runat="server" ImageUrl="~/Images/borderpic.png" Height="75px"></asp:Image>
-                
-
-
-            </div>
-
-            <div class="col s2" style="height: 75px;">
-            </div>
-            <div class="col s6 valign-wrapper" style="height: 200px;">
-                <asp:Image ID="imgCareerPortrait" runat="server" ImageUrl="~/Images/career-portrait.png" Height="200px"></asp:Image>
-            </div>
-
+            <div class="col s1">Player Pic</div>
+            <div class="col s2">Username</div>
+            <div class="col s2">Level</div>
+            <div class="col s2">Spacing</div>
+            <div class="col s6">
+                <asp:Image ID="imgHero" runat="server" ImageUrl="~/Images/career-portrait.png" /></div>
 
         </div>
 
-        <h4>Casual Stats</h4>
-        <asp:Panel ID="pnlCasual" runat="server">
-            <asp:Panel ID="pnlCasualRow1" runat="server" CssClass="row">
-            </asp:Panel>
+        <div class="row">
 
-            <asp:Panel ID="pnlCasualRow2" runat="server" CssClass="row">
-            </asp:Panel>
-        </asp:Panel>
 
-        <br />
+            <div class="col s3">
+                <h4>Casual Stats</h4>
+            </div>
 
-        <h4>Competitive Stats</h4>
-        <asp:Panel ID="pnlCompetitive" runat="server">
-            <asp:Panel ID="pnlCompetitiveRow1" runat="server" CssClass="row">
-            </asp:Panel>
+        </div>
 
-            <asp:Panel ID="pnlCompetitiveRow2" runat="server" CssClass="row">
-            </asp:Panel>
-        </asp:Panel>
+        <%--casual stats row 1--%>
+        <div class="row">
+
+            <div class="col s12">
+
+                <div class="col s2">stat</div>
+                <div class="col s2"></div>
+                <div class="col s2">stat</div>
+                <div class="col s2"></div>
+                <div class="col s2">stat</div>
+
+            </div>
+
+        </div>
+        <%--casual stats row 2--%>
+        <div class="row">
+
+            <div class="col s12">
+
+                <div class="col s2">stat</div>
+                <div class="col s2"></div>
+                <div class="col s2">stat</div>
+                <div class="col s2"></div>
+                <div class="col s2">stat</div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="row">
+
+
+            <div class="col s3">
+                <h4>Comp Stats</h4>
+            </div>
+
+        </div>
+
+        <%--comp stats row 1--%>
+        <div class="row">
+
+            <div class="col s12">
+
+                <div class="col s2">stat</div>
+                <div class="col s2"></div>
+                <div class="col s2">stat</div>
+                <div class="col s2"></div>
+                <div class="col s2">stat</div>
+
+            </div>
+
+        </div>
+        <%--comp stats row 2--%>
+        <div class="row">
+
+            <div class="col s12">
+
+                <div class="col s2">stat</div>
+                <div class="col s2"></div>
+                <div class="col s2">stat</div>
+                <div class="col s2"></div>
+                <div class="col s2">stat</div>
+
+            </div>
+
+        </div>
+
+
 
     </div>
-
-
+    <br /><br />
 </asp:Content>
