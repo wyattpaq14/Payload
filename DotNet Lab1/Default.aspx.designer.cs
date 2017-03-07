@@ -121,6 +121,24 @@ namespace DotNet_Lab1 {
         protected global::System.Web.UI.WebControls.HiddenField hfStreamName;
         
         /// <summary>
+        /// imgPlayerProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgPlayerProfile;
+        
+        /// <summary>
+        /// divPlayername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPlayername;
+        
+        /// <summary>
         /// imgHero control.
         /// </summary>
         /// <remarks>
@@ -128,5 +146,41 @@ namespace DotNet_Lab1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgHero;
+        
+        /// <summary>
+        /// divCasualRow1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCasualRow1;
+        
+        /// <summary>
+        /// divCasualRow2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCasualRow2;
+        
+        /// <summary>
+        /// divCompRow1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCompRow1;
+        
+        /// <summary>
+        /// divCompRow2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCompRow2;
     }
 }

@@ -155,9 +155,10 @@
         <br />
         <div class="row s6" style="float:left;">
 
-            <div class="col s1">Player Pic</div>
+            <div class="col s1">
+                <asp:Image ID="imgPlayerProfile" runat="server" /></div>
             <div class="col s2"></div>
-            <div class="col s2">Username</div>
+            <div runat="server" id="divPlayername" class="col s2">Username</div>
             <div class="col s2">Level</div>
             <div class="col s2"></div>
             
@@ -187,7 +188,7 @@
         <%--casual stats row 1--%>
         <div class="row">
 
-            <div class="col s12">
+            <div runat="server" ID="divCasualRow1" class="col s12">
 
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
@@ -201,7 +202,7 @@
         <%--casual stats row 2--%>
         <div class="row">
 
-            <div class="col s12">
+            <div runat="server" ID="divCasualRow2" class="col s12">
 
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
@@ -228,7 +229,7 @@
         <%--comp stats row 1--%>
         <div class="row">
 
-            <div class="col s12">
+            <div runat="server" ID="divCompRow1" class="col s12">
 
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
@@ -242,7 +243,7 @@
         <%--comp stats row 2--%>
         <div class="row">
 
-            <div class="col s12">
+            <div runat="server" ID="divCompRow2" class="col s12">
 
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
