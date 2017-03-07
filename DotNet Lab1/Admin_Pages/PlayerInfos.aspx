@@ -17,7 +17,7 @@
 
 
 
-            <asp:HyperLinkField Text="View/Edit" DataNavigateUrlFields="BattleID" DataNavigateUrlFormatString="~/Admin/Player-Info/{0}" />
+            <asp:HyperLinkField Text="View/Edit" DataNavigateUrlFields="BattleTag" DataNavigateUrlFormatString="~/Admin/Player-Info/{0}" />
         </Columns>
 
     </asp:GridView>

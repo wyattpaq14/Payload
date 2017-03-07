@@ -39,7 +39,7 @@ namespace DotNet_Lab1
 
 
             //Player-Info page
-            routes.MapPageRoute("Player-Info", "Admin/Player-Info/{BattleID}", "~/Admin_Pages/PlayerInfo.aspx", false, new RouteValueDictionary { { "BattleID", "0" } });
+            routes.MapPageRoute("Player-Info", "Admin/Player-Info/{BattleID}", "~/Admin_Pages/PlayerInfo.aspx", false, new RouteValueDictionary { { "BattleTag", "0" } });
 
             //User Page
             routes.MapPageRoute("User", "Admin/User/{UserID}", "~/Admin_Pages/User.aspx", false, new RouteValueDictionary { { "UserID", "0" } });

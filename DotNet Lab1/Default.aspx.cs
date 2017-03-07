@@ -195,6 +195,50 @@ namespace DotNet_Lab1
 
 
             apiPull = true;
+
+
+            //write player to db but first we have to check if the player allready exists
+
+            //first we have to format playaer name from stickynote69#1863 to stickynote69
+
+            //since you can search with a # or - separating battleID, we need to do an if statement, and replace them seprately
+
+            string[] splitUsername = { };
+
+            //we will now check for '#'
+
+            if (player.Username.IndexOf('#') != -1)
+            {
+                //username contains '#'
+                splitUsername = player.Username.Split('#');
+
+            }
+            else if (player.Username.IndexOf('-') != -1)
+            {
+                //username contains '-'
+                splitUsername = player.Username.Split('-');
+            }
+            else
+            {
+                splitUsername[0] = player.Username;
+            }
+
+
+            //now we will check if player exists
+
+            if (App_Code.PlayerInformation.checkExistingPlayer(splitUsername[0]))
+            {
+                //player exists so we will update
+
+            }
+            else if (!App_Code.PlayerInformation.checkExistingPlayer(splitUsername[0]))
+            {
+                //player doesnt exist so we will insert
+            }
+
+
+
+
         }
 
         public string getTopHero(OverwatchPlayer player)

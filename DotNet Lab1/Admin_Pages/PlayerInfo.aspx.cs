@@ -18,11 +18,11 @@ namespace DotNet_Lab1.Admin_Pages
             {
 
 
-                int battleID = Convert.ToInt32(RouteData.Values["BattleID"]);
+                string battleTag = RouteData.Values["BattleTag"].ToString();
 
-                if (battleID > 0)
+                if (battleTag != "")
                 {
-                    PlayerInformation info = new PlayerInformation(battleID);
+                    PlayerInformation info = new PlayerInformation(battleTag);
 
                     btnInsert.Visible = false;
                     txtUserID.Enabled = false;
@@ -37,7 +37,7 @@ namespace DotNet_Lab1.Admin_Pages
                     txtTopHero.Text = info.TopHero;
                     txtUserID.Text = info.UserID.ToString();
                 }
-                else if (battleID <= 0)
+                else if (battleTag == "")
                 {
 
                     btnUpdate.Visible = false;
