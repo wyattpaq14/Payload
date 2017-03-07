@@ -110,6 +110,7 @@ namespace DotNet_Lab1
                 txtHeros.Text += item.Name + " : " + item.Value;
             }
 
+            txtHeros.Text += "Player Portrait: " + player.ProfilePortraitURL;
             txtHeros.Text += "---------------------------\n\n";
             txtHeros.Text += "Competitive Stats";
             txtHeros.Text += "---------------------------\n\n";
