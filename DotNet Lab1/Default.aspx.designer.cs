@@ -139,6 +139,15 @@ namespace DotNet_Lab1 {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPlayername;
         
         /// <summary>
+        /// divPlayerLevel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPlayerLevel;
+        
+        /// <summary>
         /// imgHero control.
         /// </summary>
         /// <remarks>

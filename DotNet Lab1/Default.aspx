@@ -159,7 +159,7 @@
                 <asp:Image ID="imgPlayerProfile" runat="server" /></div>
             <div class="col s2"></div>
             <div runat="server" id="divPlayername" class="col s2">Username</div>
-            <div class="col s2">Level</div>
+            <div runat="server" ID="divPlayerLevel" class="col s2">Level</div>
             <div class="col s2"></div>
             
 

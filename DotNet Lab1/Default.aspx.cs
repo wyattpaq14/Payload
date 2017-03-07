@@ -128,6 +128,8 @@ namespace DotNet_Lab1
             //https://blzgdapipro-a.akamaihd.net/hero/lucio/career-portrait.png
 
             imgHero.ImageUrl = "https://blzgdapipro-a.akamaihd.net/hero/" + heroName.ToLower() + "/career-portrait.png";
+
+            divPlayerLevel.InnerHtml = player.PlayerLevel.ToString();
             try
             {
                 //loop to output Casual Hero Speficifc Stats
@@ -163,7 +165,7 @@ namespace DotNet_Lab1
             try
             {
                 //loop to output Competitive Hero Specific Stats
-                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
+                foreach (var item in player.CompetitiveStats.GetHero(heroName).GetCategory("Hero Specific"))
                 {
 
                     divCompRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
@@ -177,7 +179,7 @@ namespace DotNet_Lab1
             try
             {
                 //loop to output Competitive Combat Stats
-                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Combat"))
+                foreach (var item in player.CompetitiveStats.GetHero(heroName).GetCategory("Combat"))
                 {
 
                     divCompRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
