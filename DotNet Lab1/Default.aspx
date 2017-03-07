@@ -190,11 +190,11 @@
 
             <div runat="server" ID="divCasualRow1" class="col s12">
 
-                <div class="col s2">stat</div>
+<%--                <div class="col s2">stat</div>
                 <div class="col s2"></div>
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
-                <div class="col s2">stat</div>
+                <div class="col s2">stat</div>--%>
 
             </div>
 
@@ -204,11 +204,11 @@
 
             <div runat="server" ID="divCasualRow2" class="col s12">
 
-                <div class="col s2">stat</div>
+                <%--<div class="col s2">stat</div>
                 <div class="col s2"></div>
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
-                <div class="col s2">stat</div>
+                <div class="col s2">stat</div>--%>
 
             </div>
 
