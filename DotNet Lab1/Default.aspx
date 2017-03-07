@@ -153,16 +153,27 @@
     <div class="container col s12">
         <br />
         <br />
-        <div class="row">
+        <div class="row s6" style="float:left;">
 
             <div class="col s1">Player Pic</div>
+            <div class="col s2"></div>
             <div class="col s2">Username</div>
             <div class="col s2">Level</div>
-            <div class="col s2">Spacing</div>
+            <div class="col s2"></div>
+            
+
+        </div>
+
+
+        <div class="row" style="float:right;">
+
             <div class="col s6">
                 <asp:Image ID="imgHero" runat="server" ImageUrl="~/Images/career-portrait.png" /></div>
 
+
         </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
 
         <div class="row">
 

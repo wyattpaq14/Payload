@@ -51,5 +51,9 @@ body {
 }
 
 #ContentPlaceHolder2_imgHero {
-    height:300px;
+    height:250px;
+}
+
+#ctl00 > div:nth-child(8) > div > div > div > div > div.row.s6 > div:nth-child(4)   {
+    padding-left:25px;
 }
