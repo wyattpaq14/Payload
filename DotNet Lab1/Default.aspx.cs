@@ -117,82 +117,82 @@ namespace DotNet_Lab1
 
             //set profile pic
 
-            imgProfile.ImageUrl = player.ProfilePortraitURL;
+            //imgProfile.ImageUrl = player.ProfilePortraitURL;
 
-            //set profile username
+            ////set profile username
 
-            divUser.InnerHtml = player.Username;
+            //divUser.InnerHtml = player.Username;
 
-            heroName = getTopHero(player);
+            //heroName = getTopHero(player);
 
-            //https://blzgdapipro-a.akamaihd.net/hero/lucio/career-portrait.png
+            ////https://blzgdapipro-a.akamaihd.net/hero/lucio/career-portrait.png
 
-            imgCareerPortrait.ImageUrl = "https://blzgdapipro-a.akamaihd.net/hero/" + heroName.ToLower() + "/career-portrait.png";
-            try
-            {
-                //loop to output Casual Hero Speficifc Stats
-                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
-                {
+            //imgCareerPortrait.ImageUrl = "https://blzgdapipro-a.akamaihd.net/hero/" + heroName.ToLower() + "/career-portrait.png";
+            //try
+            //{
+            //    //loop to output Casual Hero Speficifc Stats
+            //    foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
+            //    {
 
-                    pnlCasualRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
-                }
-
-
-            }
-            catch (NullReferenceException)
-            {
-                //catches eexception thrown due to heros that havent been used
-            }
+            //        pnlCasualRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+            //    }
 
 
-            try
-            {
-                //loop to output Casual Combat Stats
-                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Combat"))
-                {
+            //}
+            //catch (NullReferenceException)
+            //{
+            //    //catches eexception thrown due to heros that havent been used
+            //}
+
+
+            //try
+            //{
+            //    //loop to output Casual Combat Stats
+            //    foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Combat"))
+            //    {
                     
-                    pnlCasualRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
-                }
+            //        pnlCasualRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+            //    }
 
-            }
-            catch (NullReferenceException)
-            {
-                //catches eexception thrown due to heros that havent been used
-            }
+            //}
+            //catch (NullReferenceException)
+            //{
+            //    //catches eexception thrown due to heros that havent been used
+            //}
 
-            try
-            {
-                //loop to output Competitive Hero Specific Stats
-                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
-                {
+            //try
+            //{
+            //    //loop to output Competitive Hero Specific Stats
+            //    foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
+            //    {
 
-                    pnlCompetitiveRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
-                }
-            }
-            catch (NullReferenceException)
-            {
-                //catches eexception thrown due to heros that havent been used
-            }
+            //        pnlCompetitiveRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+            //    }
+            //}
+            //catch (NullReferenceException)
+            //{
+            //    //catches eexception thrown due to heros that havent been used
+            //}
 
-            try
-            {
-                //loop to output Competitive Combat Stats
-                foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Combat"))
-                {
+            //try
+            //{
+            //    //loop to output Competitive Combat Stats
+            //    foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Combat"))
+            //    {
 
-                    pnlCompetitiveRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
-                }
-            }
-            catch (NullReferenceException)
-            {
-                //catches eexception thrown due to heros that havent been used
-            }
-
-
+            //        pnlCompetitiveRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+            //    }
+            //}
+            //catch (NullReferenceException)
+            //{
+            //    //catches eexception thrown due to heros that havent been used
+            //}
 
 
 
-            apiPull = true;
+
+
+            //apiPull = true;
         }
 
         public string getTopHero(OverwatchPlayer player)
