@@ -150,9 +150,10 @@
                 <div class="col m12">
                     <div class="icon-block">
                         <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                        <h3 class="center">Speeds up development</h3>
+                        <h3 class="center">Player Leaderbords</h3>
 
-
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                </asp:ContentPlaceHolder>
                     </div>
                 </div>
 

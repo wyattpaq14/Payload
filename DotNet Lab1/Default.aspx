@@ -153,27 +153,39 @@
     <div class="container col s12">
         <br />
         <br />
-        <div class="row s6" style="float:left;">
+        <div class="row s6" style="float: left;">
 
             <div class="col s1">
-                <asp:Image ID="imgPlayerProfile" runat="server" /></div>
+                <asp:Image ID="imgPlayerProfile" runat="server" />
+            </div>
             <div class="col s2"></div>
             <div runat="server" id="divPlayername" class="col s2">Username</div>
-            <div runat="server" ID="divPlayerLevel" class="col s2">Level</div>
+            <div runat="server" id="divPlayerLevel" class="col s2">Level</div>
             <div class="col s2"></div>
-            
+
 
         </div>
 
 
-        <div class="row" style="float:right;">
+        <div class="row" style="float: right;">
 
             <div class="col s6">
-                <asp:Image ID="imgHero" runat="server" ImageUrl="~/Images/career-portrait.png" /></div>
+                <asp:Image ID="imgHero" runat="server" ImageUrl="~/Images/career-portrait.png" />
+            </div>
 
 
         </div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
 
         <div class="row">
@@ -188,28 +200,26 @@
         <%--casual stats row 1--%>
         <div class="row">
 
-            <div runat="server" ID="divCasualRow1" class="col s12">
+            <div runat="server" id="divCasualRow1" class="col s12">
 
-<%--                <div class="col s2">stat</div>
+                <%--                <div class="col s2">stat</div>
                 <div class="col s2"></div>
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
                 <div class="col s2">stat</div>--%>
-
             </div>
 
         </div>
         <%--casual stats row 2--%>
         <div class="row">
 
-            <div runat="server" ID="divCasualRow2" class="col s12">
+            <div runat="server" id="divCasualRow2" class="col s12">
 
                 <%--<div class="col s2">stat</div>
                 <div class="col s2"></div>
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
                 <div class="col s2">stat</div>--%>
-
             </div>
 
         </div>
@@ -229,7 +239,7 @@
         <%--comp stats row 1--%>
         <div class="row">
 
-            <div runat="server" ID="divCompRow1" class="col s12">
+            <div runat="server" id="divCompRow1" class="col s12">
 
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
@@ -243,7 +253,7 @@
         <%--comp stats row 2--%>
         <div class="row">
 
-            <div runat="server" ID="divCompRow2" class="col s12">
+            <div runat="server" id="divCompRow2" class="col s12">
 
                 <div class="col s2">stat</div>
                 <div class="col s2"></div>
@@ -258,5 +268,34 @@
 
 
     </div>
-    <br /><br />
+    <br />
+    <br />
+</asp:Content>
+
+
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+
+    <asp:GridView ID="gvPlayerLeaderbord" runat="server" AutoGenerateColumns="false" DataSourceID="sdsPlayerInfo" CssClass="responsive-table bordered">
+
+        <Columns>
+
+
+
+            <asp:BoundField DataField="BattleTag" HeaderText="BattleTag" />
+            <asp:BoundField DataField="TopHero" HeaderText="Top Hero" />
+            <asp:BoundField DataField="PlayerRank" HeaderText="Player Rank" />
+            <asp:BoundField DataField="PlayTime" HeaderText="Play Time" />
+
+
+
+        </Columns>
+
+    </asp:GridView>
+
+    <asp:SqlDataSource ID="sdsPlayerInfo" runat="server"
+        ConnectionString="<%$ ConnectionStrings:SQL Server %>"
+        SelectCommand="getAllPlayerInfoSortByPlayerLevel" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+
+
 </asp:Content>
