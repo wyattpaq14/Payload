@@ -67,7 +67,7 @@
 
 
                     <div class="row center">
-                        <h3 class="header col s12 light">A modern responsive front-end framework based on Material Design</h3>
+                        <h3 class="header col s12 light">Welcome to Payload!</h3>
                     </div>
                     
                     <br>
@@ -101,7 +101,7 @@
             <div class="section no-pad-bot">
                 <div class="container">
                     <div class="row center">
-                        <h3 class="header col s12 light">A modern responsive front-end framework based on Material Design</h3>
+                        <h3 class="header col s12 light"></h3>
                     </div>
                 </div>
             </div>
@@ -132,12 +132,12 @@
             <div class="section no-pad-bot">
                 <div class="container">
                     <div class="row center">
-                        <h3 class="header col s12 light">A modern responsive front-end framework based on Material Design</h3>
+                        <h3 class="header col s12 light"></h3>
                     </div>
                 </div>
             </div>
             <div class="parallax">
-                <img src="../Images/background3.jpg" alt="Unsplashed background img 3">
+                <img src="../Images/background3.png" alt="Unsplashed background img 3">
             </div>
         </div>
 
@@ -166,12 +166,12 @@
             <div class="section no-pad-bot">
                 <div class="container">
                     <div class="row center">
-                        <h3 class="header col s12 light">A modern responsive front-end framework based on Material Design</h3>
+                        <h3 class="header col s12 light"></h3>
                     </div>
                 </div>
             </div>
             <div class="parallax">
-                <img src="../Images/background3.jpg" alt="Unsplashed background img 3">
+                <img src="../Images/background4.png" alt="Unsplashed background img 4">
             </div>
         </div>
 
@@ -179,7 +179,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h3 class="white-text">Company Bio</h3>
+                        <h3 class="white-text">Payload</h3>
                         <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
 
@@ -187,19 +187,10 @@
                     <div class="col l3 s12">
                         <h3 class="white-text">Settings</h3>
                         <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
-                        </ul>
-                    </div>
-                    <div class="col l3 s12">
-                        <h3 class="white-text">Connect</h3>
-                        <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
+                            <li><a class="white-text" href="#!">Popular Streams</a></li>
+                            <li><a class="white-text" href="#!">Player Statistics</a></li>
+                            <li><a class="white-text" href="#!">Player Leaderbords</a></li>
+                            <li><a class="white-text" href="#!">Login</a></li>
                         </ul>
                     </div>
                 </div>

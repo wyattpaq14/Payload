@@ -134,7 +134,8 @@
     <Content Include="Content\bootstrap-overide.css" />
     <Content Include="Images\background1.jpg" />
     <Content Include="Images\background2.jpg" />
-    <Content Include="Images\background3.jpg" />
+    <Content Include="Images\background3.png" />
+    <Content Include="Images\background4.png" />
     <Content Include="Images\borderpic.png" />
     <Content Include="Images\career-portrait.png" />
     <Content Include="Images\dArrow.png" />

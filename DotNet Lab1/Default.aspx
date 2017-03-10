@@ -298,5 +298,5 @@
         ConnectionString="<%$ ConnectionStrings:SQL Server %>"
         SelectCommand="getAllPlayerInfoSortByPlayerLevel" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
 
-
+    <br />
 </asp:Content>
