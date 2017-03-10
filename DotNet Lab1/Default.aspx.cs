@@ -41,6 +41,7 @@ namespace DotNet_Lab1
             {
 
                 DisplayPopularStreams();
+                divPlayerStats.Visible = false;
 
 
             }
@@ -136,7 +137,7 @@ namespace DotNet_Lab1
                 foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Hero Specific"))
                 {
 
-                    divCasualRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+                    divCasualRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
                 }
 
 
@@ -153,7 +154,7 @@ namespace DotNet_Lab1
                 foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Combat"))
                 {
                     
-                    divCasualRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+                    divCasualRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
                 }
 
             }
@@ -168,7 +169,7 @@ namespace DotNet_Lab1
                 foreach (var item in player.CompetitiveStats.GetHero(heroName).GetCategory("Hero Specific"))
                 {
 
-                    divCompRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+                    divCompRow1.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
                 }
             }
             catch (NullReferenceException)
@@ -182,7 +183,7 @@ namespace DotNet_Lab1
                 foreach (var item in player.CompetitiveStats.GetHero(heroName).GetCategory("Combat"))
                 {
 
-                    divCompRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper red' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
+                    divCompRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper' style='height:100px;'>" + item.Name + " : " + item.Value + "</div>"));
                 }
             }
             catch (NullReferenceException)
@@ -237,7 +238,8 @@ namespace DotNet_Lab1
             }
 
 
-
+            //make form visiable
+            divPlayerStats.Visible = true;
 
         }
 

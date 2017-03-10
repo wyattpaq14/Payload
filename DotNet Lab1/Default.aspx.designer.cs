@@ -130,6 +130,24 @@ namespace DotNet_Lab1 {
         protected global::System.Web.UI.WebControls.HiddenField hfStreamName;
         
         /// <summary>
+        /// divPlayerSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPlayerSearch;
+        
+        /// <summary>
+        /// divPlayerStats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPlayerStats;
+        
+        /// <summary>
         /// imgPlayerProfile control.
         /// </summary>
         /// <remarks>

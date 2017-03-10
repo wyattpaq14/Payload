@@ -54,9 +54,7 @@ body {
     height:250px;
 }
 
-/*row.s6 > div:nth-child(4)   {
-    padding-left:50px;
-}*/
+
 
 
 #ContentPlaceHolder2_imgPlayerProfile {
@@ -66,5 +64,11 @@ body {
 
 
 
+#ContentPlaceHolder2_divPlayerSearch > div > div > i {
+    font-size:30px;
+}
 
+#ContentPlaceHolder2_divPlayerSearch > div > div > label, #ContentPlaceHolder1_lblPassword, #ContentPlaceHolder1_lblEmail {
+    font-size: 20px;
+}
 

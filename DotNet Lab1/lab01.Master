@@ -28,7 +28,7 @@
 
         <nav class="blue" role="navigation">
             <div class="nav-wrapper container">
-                <a id="logo-container" href="#" class="brand-logo white-text">Payload</a>
+                <a id="logo-container" href="../Home" class="brand-logo white-text">Payload</a>
                 <ul class="right hide-on-med-and-down">
 
 

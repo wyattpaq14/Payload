@@ -5,12 +5,12 @@
 
 
 
-            <asp:Panel ID="Panel2" runat="server" CssClass="input-field" DefaultButton="lbSearch">
-                <asp:TextBox ID="txtSearch" runat="server" CssClass="white-text blue" TextMode="Search"></asp:TextBox>
+        <asp:Panel ID="Panel2" runat="server" CssClass="input-field" DefaultButton="lbSearch">
+            <asp:TextBox ID="txtSearch" runat="server" CssClass="white-text blue" TextMode="Search"></asp:TextBox>
 
 
-                <label class="label-icon" for="search"><i class="material-icons white-text">search</i></label>
-            </asp:Panel>
+            <label class="label-icon" for="search"><i class="material-icons white-text">search</i></label>
+        </asp:Panel>
 
     </li>
 
@@ -150,7 +150,26 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <div class="container col s12">
+
+
+    <div id="divPlayerSearch" runat="server" class="row">
+
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="large material-icons prefix">search</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Search Battle Tag</label>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <div id="divPlayerStats" runat="server" class="container col s12">
         <br />
         <br />
         <div class="row s6" style="float: left;">
@@ -240,13 +259,6 @@
         <div class="row">
 
             <div runat="server" id="divCompRow1" class="col s12">
-
-                <div class="col s2">stat</div>
-                <div class="col s2"></div>
-                <div class="col s2">stat</div>
-                <div class="col s2"></div>
-                <div class="col s2">stat</div>
-
             </div>
 
         </div>
@@ -254,13 +266,6 @@
         <div class="row">
 
             <div runat="server" id="divCompRow2" class="col s12">
-
-                <div class="col s2">stat</div>
-                <div class="col s2"></div>
-                <div class="col s2">stat</div>
-                <div class="col s2"></div>
-                <div class="col s2">stat</div>
-
             </div>
 
         </div>
