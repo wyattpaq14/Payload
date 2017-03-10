@@ -155,7 +155,7 @@
 
     <asp:Panel ID="pnlSecPlayerSearch" runat="server" CssClass="row">
         <div class="col s12"><br />
-            <h3 style="text-align:center;">Please search for a hero to display information!</h3>
+            <p style="text-align:center; font-size:20px;">Please search for a hero to display information!</p>
 
         </div>
 
@@ -207,7 +207,7 @@
 
 
             <div class="col s3">
-                <h4>Casual Stats</h4>
+                <h3>Casual Stats</h3>
             </div>
 
         </div>
@@ -245,8 +245,8 @@
         <div class="row">
 
 
-            <div class="col s3">
-                <h4>Comp Stats</h4>
+            <div class="col s4">
+                <h3>Competitive Stats</h3>
             </div>
 
         </div>
@@ -289,7 +289,7 @@
             <asp:BoundField DataField="PlayTime" HeaderText="Play Time" />
 
 
-
+            <asp:HyperLinkField Text="View Stats" DataNavigateUrlFields="BattleTag" DataNavigateUrlFormatString="~/Home/{0}"  />
         </Columns>
 
     </asp:GridView>

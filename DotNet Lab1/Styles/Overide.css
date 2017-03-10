@@ -15,16 +15,19 @@ nav {
 }
 
 body {
-    padding-top:75px;
+    
     font-family:'bignoodletitlingoblique';
 }
 
-.btn {
-   width: 100%;
-   font-size:25px;
-   height:50px;
-   padding-top:10px;
+#index-banner > div.section.no-pad-bot > div > h1 {
+    padding-top:20px;
+}
 
+.btn {
+    width: 100%;
+    font-size: 25px;
+    height: 50px;
+    padding-top: 10px;
 }
 #cphSearch_txtSearch {
     position:relative;
