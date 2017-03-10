@@ -152,20 +152,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
 
-    <div id="divPlayerSearch" runat="server" class="row">
 
+    <asp:Panel ID="pnlSecPlayerSearch" runat="server" CssClass="row">
+        <div class="col s12"><br />
+            <h3 style="text-align:center;">Please search for a hero to display information!</h3>
 
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="large material-icons prefix">search</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">Search Battle Tag</label>
-            </div>
         </div>
 
+    </asp:Panel>
 
 
-    </div>
 
 
 

@@ -64,11 +64,11 @@ body {
 
 
 
-#ContentPlaceHolder2_divPlayerSearch > div > div > i {
-    font-size:30px;
+#ContentPlaceHolder2_pnlSecPlayerSearch > div > div > i {
+    font-size: 30px;
 }
 
-#ContentPlaceHolder2_divPlayerSearch > div > div > label, #ContentPlaceHolder1_lblPassword, #ContentPlaceHolder1_lblEmail {
+#ContentPlaceHolder2_lblSecSearch, #ContentPlaceHolder1_lblPassword, #ContentPlaceHolder1_lblEmail {
     font-size: 20px;
 }
 

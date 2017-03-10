@@ -85,8 +85,7 @@ namespace DotNet_Lab1
 
         protected void btnExecuteAPI_Click(object sender, EventArgs e)
         {
-            RegisterAsyncTask(new PageAsyncTask(RunDemo));
-            Task.Run(RunDemo);
+            registerRunTask();
 
         }
 
@@ -115,6 +114,10 @@ namespace DotNet_Lab1
 
 
 
+            //hide warning text 
+
+
+            pnlSecPlayerSearch.Visible = false;
 
             //set profile pic
 
@@ -263,6 +266,15 @@ namespace DotNet_Lab1
 
             return heros[topHeroIndex];
 
+        }
+
+
+
+
+        public void registerRunTask()
+        {
+            RegisterAsyncTask(new PageAsyncTask(RunDemo));
+            Task.Run(RunDemo);
         }
     }
 }
