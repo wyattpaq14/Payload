@@ -4,19 +4,19 @@
     <li>
 
 
-        <div class="input-field">
 
-            <asp:TextBox ID="txtSearch" runat="server" CssClass="white-text blue" TextMode="Search"></asp:TextBox>
+            <asp:Panel ID="Panel2" runat="server" CssClass="input-field" DefaultButton="lbSearch">
+                <asp:TextBox ID="txtSearch" runat="server" CssClass="white-text blue" TextMode="Search"></asp:TextBox>
 
 
-            <label class="label-icon" for="search"><i class="material-icons white-text">search</i></label>
+                <label class="label-icon" for="search"><i class="material-icons white-text">search</i></label>
+            </asp:Panel>
 
-        </div>
     </li>
 
     <li>
 
-        <asp:LinkButton ID="lbSearch" runat="server" OnClick="btnExecuteAPI_Click"><i id="icoclose" class="material-icons white-text">play_arrow</i></asp:LinkButton>
+        <asp:LinkButton ID="lbSearch" runat="server" OnClick="btnExecuteAPI_Click"><i id="icoclose" class="material-icons white-text" style="display:none;">play_arrow</i></asp:LinkButton>
     </li>
 
 </asp:Content>
