@@ -37,7 +37,7 @@ body {
 
 
 #lbLoginState {
-    font-size:25px;
+    font-size: 20px;
 }
 
 #logo-container {
@@ -50,7 +50,7 @@ body {
 }
 
 #lbPlayerInfo, #lbUsers, #lbStreams, #lbHome, #lbAdminPanel {
-    font-size:25px;
+    font-size: 20px;
 }
 
 #ContentPlaceHolder2_imgHero {
@@ -66,11 +66,6 @@ body {
 }
 
 
-
-#ContentPlaceHolder2_pnlSecPlayerSearch > div > div > i {
-    font-size: 30px;
-}
-
 #ContentPlaceHolder2_lblSecSearch, #ContentPlaceHolder1_lblPassword, #ContentPlaceHolder1_lblEmail {
     font-size: 20px;
 }
@@ -78,3 +73,10 @@ body {
 #ctl00 > footer > div.container > div > div.col.l3.s12 {
     float:right;
 }
+
+#ctl00 > nav > div a {
+    font-size:20px;
+}
+
+
+

@@ -138,9 +138,9 @@
     <Content Include="Images\background4.png" />
     <Content Include="Images\borderpic.png" />
     <Content Include="Images\career-portrait.png" />
-    <Content Include="Images\dArrow.png" />
+    <Content Include="Images\dVote.png" />
     <Content Include="Images\pic.png" />
-    <Content Include="Images\uArrow.png" />
+    <Content Include="Images\uVote.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -74,11 +74,11 @@
             </div>
 
             <div class="col l4">
-                <div class="row">
-                    <asp:Button ID="btnUpvote" runat="server" Text="Upvote" CssClass="waves-effect waves-light btn bignoodle" OnClick="btnUpvote_Click" />
+                <div class="row offset-s1">
+                    <asp:ImageButton ID="ibUpVote" CssClass="bignoodle" OnClick="btnUpvote_Click" runat="server" ImageUrl="~/Images/uVote.png" Width="150px" />
                 </div>
-                <div class="row">
-                    <asp:Button ID="btnDownVote" runat="server" Text="Downvote" CssClass="waves-effect waves-light btn red" OnClick="btnDownVote_Click" />
+                <div class="row offset-s1">
+                    <asp:ImageButton ID="ibDownVote" CssClass="bignoodle" OnClick="btnDownVote_Click" runat="server" ImageUrl="~/Images/dVote.png" Width="150px" />
                 </div>
             </div>
         </div>
@@ -154,8 +154,9 @@
 
 
     <asp:Panel ID="pnlSecPlayerSearch" runat="server" CssClass="row">
-        <div class="col s12"><br />
-            <p style="text-align:center; font-size:20px;">Please search for a hero to display information!</p>
+        <div class="col s12">
+            <br />
+            <p style="text-align: center; font-size: 20px;">Please search for a hero to display information!</p>
 
         </div>
 
@@ -289,7 +290,7 @@
             <asp:BoundField DataField="PlayTime" HeaderText="Play Time" />
 
 
-            <asp:HyperLinkField Text="View Stats" DataNavigateUrlFields="BattleTag" DataNavigateUrlFormatString="~/Home/{0}"  />
+            <asp:HyperLinkField Text="View Stats" DataNavigateUrlFields="BattleTag" DataNavigateUrlFormatString="~/Home/{0}" />
         </Columns>
 
     </asp:GridView>

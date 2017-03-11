@@ -31,7 +31,15 @@
                 <a id="logo-container" href="../Home" class="brand-logo white-text">Payload</a>
                 <ul class="right hide-on-med-and-down">
 
-
+                    <li>
+                        <a class="white-text">Popular Streams</a>
+                    </li>
+                    <li>
+                        <a class="white-text">Player Stats</a>
+                    </li>
+                    <li>
+                        <a class="white-text">Player Leaderbords</a>
+                    </li>
 
                     <%--cph for search shit--%>
                     <asp:ContentPlaceHolder ID="cphSearch" runat="server">
@@ -39,12 +47,15 @@
 
 
 
+                    
 
 
                     <li>
-                        <asp:LinkButton ID="lbLoginState" runat="server" Text="asdf" OnClick="lbLoginState_Click" CssClass="white-text" CausesValidation="false"  /></li>
+                        <asp:LinkButton ID="lbLoginState" runat="server" Text="asdf" OnClick="lbLoginState_Click" CssClass="white-text" CausesValidation="false" /></li>
                     <li>
                         <asp:LinkButton ID="lbAdminPanel" runat="server" OnClick="lbAdminPanel_Click" CssClass="white-text" CausesValidation="false"></asp:LinkButton></li>
+
+
                 </ul>
 
 
@@ -69,7 +80,7 @@
                     <div class="row center">
                         <h3 class="header col s12 light">Welcome to Payload!</h3>
                     </div>
-                    
+
                     <br>
                     <br>
                 </div>
@@ -80,7 +91,7 @@
         </div>
 
 
-        <div class="container">
+        <div id="popStreams" class="container">
             <div class="section">
 
 
@@ -110,7 +121,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div id="playerStats" class="container">
             <div class="section">
                 <div class="col m12">
                     <div class="icon-block">
@@ -118,7 +129,7 @@
                         <h3 class="center">Player Statistics</h3>
 
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-                </asp:ContentPlaceHolder>
+                        </asp:ContentPlaceHolder>
                     </div>
                 </div>
 
@@ -145,7 +156,7 @@
 
 
 
-        <div class="container">
+        <div id="playerLeader" class="container">
             <div class="section">
                 <div class="col m12">
                     <div class="icon-block">
@@ -153,7 +164,7 @@
                         <h3 class="center">Player Leaderbords</h3>
 
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-                </asp:ContentPlaceHolder>
+                        </asp:ContentPlaceHolder>
                     </div>
                 </div>
 
@@ -208,9 +219,50 @@
         <script src="../Scripts/materialize.js"></script>
         <script src="../Scripts/init.js"></script>
         <link href="../Styles/Overide.css" type="text/css" rel="stylesheet" media="screen,projection" />
-        <%--<script>
-            document.querySelector('body').style.fontFamily = "bignoodletitlingoblique";
-        </script>--%>
+        <script>
+
+
+
+            //pop streams
+            $("#ctl00 > nav > div > ul.right.hide-on-med-and-down > li:nth-child(1) > a").click(function () {
+
+                $('html, body').animate({
+                    scrollTop: $("#popStreams").offset().top
+                }, 1000);
+            });
+            //Player Stats
+            $("#ctl00 > nav > div > ul.right.hide-on-med-and-down > li:nth-child(2) > a").click(function () {
+
+                $('html, body').animate({
+                    scrollTop: $("#playerStats").offset().top
+                }, 1000);
+            });
+            //Player Leaderboards
+            $("#ctl00 > nav > div > ul.right.hide-on-med-and-down > li:nth-child(3) > a").click(function () {
+
+                $('html, body').animate({
+                    scrollTop: $("#playerLeader").offset().top
+                }, 1000);
+            });
+            //search
+            $("#ctl00 > nav > div > ul.right.hide-on-med-and-down > li:nth-child(1) > a").click(function () {
+
+                $('html, body').animate({
+                    scrollTop: $("#popStreams").offset().top
+                }, 1000);
+            });
+
+
+            if (document.querySelector('#ContentPlaceHolder2_divPlayername') !== null) {
+                $('html, body').animate({
+                    scrollTop: $("#playerStats").offset().top
+                }, 1000);
+            }
+            else {
+                
+            }
+
+        </script>
     </form>
 </body>
 </html>
