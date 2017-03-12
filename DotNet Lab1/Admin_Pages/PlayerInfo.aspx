@@ -45,8 +45,9 @@
     <div class="row">
         
         <div class="input-field col s12">
-            <asp:TextBox ID="txtTopHero" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+            <asp:TextBox ID="txtTopHero" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label ID="lblTopHero" runat="server" Text="Top Hero" CssClass="col-lg-2 control-label" AssociatedControlID="txtTopHero"></asp:Label>
+            <asp:RequiredFieldValidator ID="rfvTopHero" runat="server" Display="None" ControlToValidate="txtTopHero" ErrorMessage="Top Hero is required"></asp:RequiredFieldValidator>
         </div>
     </div>
     <br />
@@ -57,8 +58,9 @@
     <div class="row">
 
         <div class="input-field col s12">
-            <asp:TextBox ID="txtPlayerRank" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+            <asp:TextBox ID="txtPlayerRank" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label ID="lblPlayerRank" runat="server" Text="Player Rank" CssClass="col-lg-2 control-label" AssociatedControlID="txtPlayerRank"></asp:Label>
+            <asp:RequiredFieldValidator ID="rfvPlayerRank" runat="server" Display="None" ControlToValidate="txtPlayerRank" ErrorMessage="Player Rank is required"></asp:RequiredFieldValidator>
         </div>
     </div>
     <br />
@@ -68,8 +70,9 @@
     <div class="row">
 
         <div class="input-field col s12">
-            <asp:TextBox ID="txtPlayTime" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+            <asp:TextBox ID="txtPlayTime" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label ID="lblPlayTime" runat="server" Text="Play Time" CssClass="col-lg-2 control-label" AssociatedControlID="txtPlayTime"></asp:Label>
+            <asp:RequiredFieldValidator ID="rfvPlayTime" runat="server" Display="None" ControlToValidate="txtPlayTime" ErrorMessage="Play Time is required"></asp:RequiredFieldValidator>
 
         </div>
     </div>

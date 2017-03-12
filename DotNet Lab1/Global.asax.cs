@@ -22,7 +22,7 @@ namespace DotNet_Lab1
             routes.Ignore("{resource}.axd/{*pathInfo}");
 
             //non-admin routes
-            routes.MapPageRoute("Home", "Home", "~/Default.aspx");
+            
             routes.MapPageRoute("Sign-In", "Home/Sign-In", "~/Pages/Login.aspx");
             routes.MapPageRoute("Admin-Panel", "Admin", "~/Admin_Pages/Admin.aspx");
             routes.MapPageRoute("Register", "Home/Register", "~/Pages/Register.aspx");
@@ -43,10 +43,13 @@ namespace DotNet_Lab1
 
             //User Page
             routes.MapPageRoute("User", "Admin/User/{UserID}", "~/Admin_Pages/User.aspx", false, new RouteValueDictionary { { "UserID", "0" } });
-            //Section Page
+
+            //Stream Page
             routes.MapPageRoute("Stream", "Admin/Stream/{StreamID}", "~/Admin_Pages/Stream.aspx", false, new RouteValueDictionary { { "StreamID", "0" } });
 
-            
+            //Home page
+            routes.MapPageRoute("Home", "Home/{BattleTag}", "~/Default.aspx", false, new RouteValueDictionary { { "BattleTag", "0" }, { "BattleID", "1" } });
+
         }
     }
 }
