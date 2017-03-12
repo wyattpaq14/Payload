@@ -94,7 +94,7 @@ namespace DotNet_Lab1.App_Code
             DataTable dt = getPlayerInfo(battleTag);
             if (dt.Rows.Count > 0)
             {
-                
+
                 //player exists
                 return true;
             }
@@ -108,7 +108,7 @@ namespace DotNet_Lab1.App_Code
                 //error probaly occured
                 return false;
             }
-           
+
 
 
 
@@ -166,7 +166,14 @@ namespace DotNet_Lab1.App_Code
             SqlCommand cmd = new SqlCommand("createNewPlayer", cn);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@UserID", SqlDbType.Int).Value = playerinfo.UserID;
+            if (playerinfo.UserID == 0)
+            {
+                cmd.Parameters.Add("@UserID", SqlDbType.Int).Value = DBNull.Value;
+            }
+            else {
+                cmd.Parameters.Add("@UserID", SqlDbType.Int).Value = playerinfo.UserID;
+            }
+
             cmd.Parameters.Add("@BattleTag", SqlDbType.VarChar).Value = playerinfo.BattleTag;
             cmd.Parameters.Add("@BattleID", SqlDbType.Int).Value = playerinfo.BattleID;
             cmd.Parameters.Add("@TopHero", SqlDbType.VarChar).Value = playerinfo.TopHero;

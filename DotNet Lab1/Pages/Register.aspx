@@ -46,7 +46,6 @@
     <br />
     <br />
     <asp:Button ID="btnRegister" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Register" OnClick="btnRegister_Click" /><br />
-    <asp:Button ID="btnForgotPassword" runat="server" CssClass="col-lg-4 btn btn-default" Text="Forgot Password" />
 
     <asp:ValidationSummary ID="vsForm" ShowSummary="true" runat="server" />
 

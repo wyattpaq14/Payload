@@ -172,12 +172,12 @@
         <div class="row s6" style="float: left;">
 
             <div class="col s1">
-                <asp:Image ID="imgPlayerProfile" runat="server" />
+                <asp:Image ID="imgPlayerProfile" runat="server" Width="100px" Height="100px" />
             </div>
             <div class="col s2"></div>
-            <div runat="server" id="divPlayername" class="col s2">Username</div>
-            <div runat="server" id="divPlayerLevel" class="col s2">Level</div>
-            <div class="col s2"></div>
+            <div runat="server" id="divPlayername" class="col s2 offset-s2" style="font-size: 20px;">Username</div><br /><br /><br /><br /><br />
+            <div runat="server" id="divPlayerLevel" class="col s4" style="font-size: 20px;">Level</div>
+            <div class="col s1"></div>
 
 
         </div>

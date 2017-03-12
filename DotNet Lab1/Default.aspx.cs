@@ -13,15 +13,22 @@ namespace DotNet_Lab1
 {
     public partial class Default : System.Web.UI.Page
     {
+        //declare variables
+
+        //variable to determin if http request has been ran
         public bool apiPull = false;
         public string selectedStream;
+        //staticly assigned array with heros
         public string[] heros = { "Ana", "Bastion", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "McCree", "Mei", "Mercy", "Pharah", "Reaper", "Reinhardt", "Roadhog",
-            "Soldier76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta" };
+            "Soldier-76", "Sombra", "Symmetra", "Torbjorn", "Tracer", "Widowmaker", "Winston", "Zarya", "Zenyatta" };
 
+        //secondary array to store hero hours in relation to the above array
         public double[] hours = new double[23];
 
+        //default variable
         public string heroName = "Ana";
 
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -66,7 +73,7 @@ namespace DotNet_Lab1
             hfStreamName.Value = selectedStream;
         }
 
-
+        //up vote selected stream
         protected void btnUpvote_Click(object sender, EventArgs e)
         {
             App_Code.TStream.AddStreamPoints(selectedStream);
@@ -76,7 +83,7 @@ namespace DotNet_Lab1
 
 
 
-
+        //down vote selected stream
         protected void btnDownVote_Click(object sender, EventArgs e)
         {
             App_Code.TStream.SubStreamPoints(selectedStream);
@@ -85,11 +92,12 @@ namespace DotNet_Lab1
 
         protected void btnExecuteAPI_Click(object sender, EventArgs e)
         {
+            //registers asyn task
             registerRunTask();
 
         }
 
-        async Task RunDemo()
+        async Task StorePlayer()
         {
 
             OverwatchPlayer player = new OverwatchPlayer(txtSearch.Text);
@@ -133,7 +141,7 @@ namespace DotNet_Lab1
 
             imgHero.ImageUrl = "https://blzgdapipro-a.akamaihd.net/hero/" + heroName.ToLower() + "/career-portrait.png";
 
-            divPlayerLevel.InnerHtml = player.PlayerLevel.ToString();
+            divPlayerLevel.InnerHtml = "Level: " + player.PlayerLevel;
             try
             {
                 //loop to output Casual Hero Speficifc Stats
@@ -156,7 +164,7 @@ namespace DotNet_Lab1
                 //loop to output Casual Combat Stats
                 foreach (var item in player.CasualStats.GetHero(heroName).GetCategory("Combat"))
                 {
-                    
+
                     divCasualRow2.Controls.Add(new LiteralControl("<div class='col s3 valign-wrapper' style='height:100px; font-size:20px;'>" + item.Name + " : " + item.Value + "</div>"));
                 }
 
@@ -232,17 +240,63 @@ namespace DotNet_Lab1
 
             if (App_Code.PlayerInformation.checkExistingPlayer(splitUsername[0]))
             {
+
                 //player exists so we will update
+
+                App_Code.PlayerInformation ply = new App_Code.PlayerInformation();
+
+                ply.BattleTag = splitUsername[0];
+                ply.BattleID = Convert.ToInt32(splitUsername[1]);
+                ply.TopHero = heroName;
+                ply.PlayerRank = player.PlayerLevel;
+                ply.PlayTime = Convert.ToInt32(player.CasualStats.GetHero(heroName).GetCategory("Game").GetStat("Time Played").Value / 60 / 60);
+
+                App_Code.PlayerInformation.UpdatePlayerInfo(ply);
 
             }
             else if (!App_Code.PlayerInformation.checkExistingPlayer(splitUsername[0]))
             {
                 //player doesnt exist so we will insert
+
+                App_Code.PlayerInformation ply = new App_Code.PlayerInformation();
+
+
+                //need to convert email to user ID
+                
+
+                DataTable usrTbl = App_Code.User.GetUser(Session["FullName"].ToString());
+
+                if (usrTbl.Rows.Count > 0)
+                {
+                    ply.UserID = (int)usrTbl.Rows[0]["UserID"];
+                }
+                else
+                {
+                    ply.UserID = 0;
+                }
+
+
+
+
+
+
+
+                ply.BattleTag = splitUsername[0];
+                ply.BattleID = Convert.ToInt32(splitUsername[1]);
+                ply.TopHero = heroName;
+                ply.PlayerRank = player.PlayerLevel;
+                ply.PlayTime = Convert.ToInt32(player.CasualStats.GetHero(heroName).GetCategory("Game").GetStat("Time Played").Value / 60 / 60);
+
+
+                App_Code.PlayerInformation.InsertPlayerInfo(ply);
             }
 
 
             //make form visiable
             divPlayerStats.Visible = true;
+
+            //refresh gridview
+            this.gvPlayerLeaderbord.DataBind();
 
         }
 
@@ -273,8 +327,8 @@ namespace DotNet_Lab1
 
         public void registerRunTask()
         {
-            RegisterAsyncTask(new PageAsyncTask(RunDemo));
-            Task.Run(RunDemo);
+            RegisterAsyncTask(new PageAsyncTask(StorePlayer));
+            Task.Run(StorePlayer);
         }
     }
 }
