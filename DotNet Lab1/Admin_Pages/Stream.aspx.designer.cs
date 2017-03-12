@@ -13,15 +13,6 @@ namespace DotNet_Lab1.Admin_Pages {
     public partial class Stream {
         
         /// <summary>
-        /// lblStreamID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStreamID;
-        
-        /// <summary>
         /// txtStreamID control.
         /// </summary>
         /// <remarks>
@@ -31,13 +22,13 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtStreamID;
         
         /// <summary>
-        /// lblStreamName control.
+        /// lblStreamID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStreamName;
+        protected global::System.Web.UI.WebControls.Label lblStreamID;
         
         /// <summary>
         /// txtStreamName control.
@@ -49,6 +40,15 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtStreamName;
         
         /// <summary>
+        /// lblStreamName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStreamName;
+        
+        /// <summary>
         /// rfvStreamName control.
         /// </summary>
         /// <remarks>
@@ -56,15 +56,6 @@ namespace DotNet_Lab1.Admin_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStreamName;
-        
-        /// <summary>
-        /// lblStreamPoints control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStreamPoints;
         
         /// <summary>
         /// txtStreamPoints control.
@@ -76,6 +67,15 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtStreamPoints;
         
         /// <summary>
+        /// lblStreamPoints control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStreamPoints;
+        
+        /// <summary>
         /// rfvStreamPoints control.
         /// </summary>
         /// <remarks>
@@ -85,15 +85,6 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStreamPoints;
         
         /// <summary>
-        /// lblStreamIsBanned control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStreamIsBanned;
-        
-        /// <summary>
         /// txtStreamIsBanned control.
         /// </summary>
         /// <remarks>
@@ -101,6 +92,15 @@ namespace DotNet_Lab1.Admin_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStreamIsBanned;
+        
+        /// <summary>
+        /// lblStreamIsBanned control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStreamIsBanned;
         
         /// <summary>
         /// rfvStreamIsBanned control.

@@ -59,7 +59,7 @@ body {
 
 
 
-#ContentPlaceHolder2_lblSecSearch, #ContentPlaceHolder1_lblPassword, #ContentPlaceHolder1_lblEmail {
+#ContentPlaceHolder2_lblSecSearch, #ContentPlaceHolder1_lblPassword, #ContentPlaceHolder1_lblEmail, #ContentPlaceHolder1_lblConfirmPassword {
     font-size: 20px;
 }
 

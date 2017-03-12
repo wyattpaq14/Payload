@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" MasterPageFile="~/lab01.Master" Inherits="DotNet_Lab1.Pages.Login" %>
 
 <asp:Content ID="loginForms" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <br />
     <%--email validator, textbox and label--%>
     <div class="row">
         

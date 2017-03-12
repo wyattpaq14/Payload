@@ -20,7 +20,7 @@ namespace DotNet_Lab1.Admin_Pages
 
                 string battleTag = RouteData.Values["BattleTag"].ToString();
 
-                if (battleTag != "")
+                if (battleTag != "0")
                 {
                     PlayerInformation info = new PlayerInformation(battleTag);
 
@@ -37,7 +37,7 @@ namespace DotNet_Lab1.Admin_Pages
                     txtTopHero.Text = info.TopHero;
                     txtUserID.Text = info.UserID.ToString();
                 }
-                else if (battleTag == "")
+                else if (battleTag == "0")
                 {
 
                     btnUpdate.Visible = false;

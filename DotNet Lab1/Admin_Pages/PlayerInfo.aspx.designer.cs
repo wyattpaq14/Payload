@@ -13,15 +13,6 @@ namespace DotNet_Lab1.Admin_Pages {
     public partial class PlayerInfo {
         
         /// <summary>
-        /// lblUserID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserID;
-        
-        /// <summary>
         /// txtUserID control.
         /// </summary>
         /// <remarks>
@@ -31,13 +22,13 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtUserID;
         
         /// <summary>
-        /// lblBattleID control.
+        /// lblUserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBattleID;
+        protected global::System.Web.UI.WebControls.Label lblUserID;
         
         /// <summary>
         /// txtBattleID control.
@@ -49,13 +40,13 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtBattleID;
         
         /// <summary>
-        /// lblBattleTag control.
+        /// lblBattleID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblBattleTag;
+        protected global::System.Web.UI.WebControls.Label lblBattleID;
         
         /// <summary>
         /// txtBattleTag control.
@@ -67,6 +58,15 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtBattleTag;
         
         /// <summary>
+        /// lblBattleTag control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblBattleTag;
+        
+        /// <summary>
         /// rfvBattleTag control.
         /// </summary>
         /// <remarks>
@@ -74,15 +74,6 @@ namespace DotNet_Lab1.Admin_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBattleTag;
-        
-        /// <summary>
-        /// lblTopHero control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTopHero;
         
         /// <summary>
         /// txtTopHero control.
@@ -94,13 +85,13 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtTopHero;
         
         /// <summary>
-        /// lblPlayerRank control.
+        /// lblTopHero control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPlayerRank;
+        protected global::System.Web.UI.WebControls.Label lblTopHero;
         
         /// <summary>
         /// txtPlayerRank control.
@@ -112,13 +103,13 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.TextBox txtPlayerRank;
         
         /// <summary>
-        /// lblPlayTime control.
+        /// lblPlayerRank control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPlayTime;
+        protected global::System.Web.UI.WebControls.Label lblPlayerRank;
         
         /// <summary>
         /// txtPlayTime control.
@@ -128,6 +119,15 @@ namespace DotNet_Lab1.Admin_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPlayTime;
+        
+        /// <summary>
+        /// lblPlayTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPlayTime;
         
         /// <summary>
         /// btnUpdate control.
