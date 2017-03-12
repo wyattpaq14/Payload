@@ -28,7 +28,7 @@ namespace DotNet_Lab1
         //default variable
         public string heroName = "Ana";
 
-        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -106,6 +106,8 @@ namespace DotNet_Lab1
             await player.DetectRegionPC();
             await player.UpdateStats();
 
+
+
             if (!apiPull)
             {
                 WritePlayer(player);
@@ -119,7 +121,6 @@ namespace DotNet_Lab1
 
         public void WritePlayer(OverwatchPlayer player)
         {
-
 
 
             //hide warning text 
@@ -262,7 +263,7 @@ namespace DotNet_Lab1
 
 
                 //need to convert email to user ID
-                
+
 
                 DataTable usrTbl = App_Code.User.GetUser(Session["FullName"].ToString());
 

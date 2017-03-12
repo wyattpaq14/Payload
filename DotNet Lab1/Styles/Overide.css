@@ -59,7 +59,11 @@ body {
 
 
 
-#ContentPlaceHolder2_lblSecSearch, #ContentPlaceHolder1_lblPassword, #ContentPlaceHolder1_lblEmail, #ContentPlaceHolder1_lblConfirmPassword {
+#ContentPlaceHolder2_lblSecSearch, #ContentPlaceHolder1_lblPassword, #ContentPlaceHolder1_lblEmail, #ContentPlaceHolder1_lblConfirmPassword,
+#ContentPlaceHolder1_lblStreamID, #ContentPlaceHolder1_lblStreamName, #ContentPlaceHolder1_lblStreamPoints, #ContentPlaceHolder1_lblStreamIsBanned,
+#ContentPlaceHolder1_lblUsrEmail, #ContentPlaceHolder1_lblUserPassword, #ContentPlaceHolder1_lblUserRank, #ContentPlaceHolder1_lblUserIsBanned,
+#ContentPlaceHolder1_lblUserIsAdmin, #ContentPlaceHolder1_lblUserID, #ContentPlaceHolder1_lblBattleID, #ContentPlaceHolder1_lblBattleTag, #ContentPlaceHolder1_lblTopHero,
+#ContentPlaceHolder1_lblPlayerRank, #ContentPlaceHolder1_lblPlayTime {
     font-size: 20px;
 }
 
