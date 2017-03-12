@@ -28,11 +28,49 @@ namespace DotNet_Lab1
         //default variable
         public string heroName = "Ana";
 
-        
+        public string selectedBattleTag = null;
+        public string selectedBattleID = null;
+        public string searchString = null;
+
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
             txtSearch.Attributes.Add("Placeholder", "Search Battle Tag");
+
+            try
+            {
+
+                selectedBattleTag = Request.QueryString["BattleTag"];
+                selectedBattleID = Request.QueryString["BattleID"];
+
+
+
+                //retreve routed data, incase someone wants to view player from leaderboards
+                if (selectedBattleID == null)
+                {
+                    searchString = Request.QueryString["BattleTag"];
+                }
+                else
+                {
+                    searchString = Request.QueryString["BattleTag"] + "#" + Request.QueryString["BattleID"];
+                }
+                
+            }
+            catch
+            {
+
+            }
+
+            //search if player is selected
+            //will not work if player is playing on console
+
+            if (selectedBattleTag != null)
+            {
+                txtSearch.Text = selectedBattleTag;
+                registerRunTask();
+            }
+
 
 
 
@@ -274,11 +312,6 @@ namespace DotNet_Lab1
                 {
                     ply.UserID = 0;
                 }
-
-
-
-
-
 
 
                 ply.BattleTag = splitUsername[0];

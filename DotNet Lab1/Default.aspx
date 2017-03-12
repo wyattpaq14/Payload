@@ -283,14 +283,14 @@
         <Columns>
 
 
-
+            <asp:BoundField DataField="BattleID" HeaderText="BattleID" />
             <asp:BoundField DataField="BattleTag" HeaderText="BattleTag" />
             <asp:BoundField DataField="TopHero" HeaderText="Top Hero" />
             <asp:BoundField DataField="PlayerRank" HeaderText="Player Rank" />
             <asp:BoundField DataField="PlayTime" HeaderText="Play Time" />
 
 
-            <asp:HyperLinkField Text="View Stats" DataNavigateUrlFields="BattleTag" DataNavigateUrlFormatString="~/Home/{0}" />
+            <asp:HyperLinkField Text="View Stats" DataNavigateUrlFields="BattleTag,BattleID" DataNavigateUrlFormatString="~/Home/?BattleTag={0}&BattleID={1}" Visible="false" />
         </Columns>
 
     </asp:GridView>

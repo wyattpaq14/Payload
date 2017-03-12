@@ -94,6 +94,15 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.Label lblTopHero;
         
         /// <summary>
+        /// rfvTopHero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTopHero;
+        
+        /// <summary>
         /// txtPlayerRank control.
         /// </summary>
         /// <remarks>
@@ -112,6 +121,15 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.Label lblPlayerRank;
         
         /// <summary>
+        /// rfvPlayerRank control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPlayerRank;
+        
+        /// <summary>
         /// txtPlayTime control.
         /// </summary>
         /// <remarks>
@@ -128,6 +146,15 @@ namespace DotNet_Lab1.Admin_Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPlayTime;
+        
+        /// <summary>
+        /// rfvPlayTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPlayTime;
         
         /// <summary>
         /// btnUpdate control.
