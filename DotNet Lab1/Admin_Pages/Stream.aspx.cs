@@ -20,6 +20,7 @@ namespace DotNet_Lab1.Admin_Pages
 
                 if (streamID > 0)
                 {
+                    //update statement
                     TStream stream = new TStream(streamID);
 
                     txtStreamID.Text = stream.StreamID.ToString();
@@ -32,6 +33,8 @@ namespace DotNet_Lab1.Admin_Pages
                 }
                 else if (streamID <= 0)
                 {
+                    //insrrt statement
+                    btnDelete.Visible = false;
                     txtStreamID.Enabled = false;
                     txtStreamID.Visible = false;
                     lblStreamID.Visible = false;
@@ -77,6 +80,12 @@ namespace DotNet_Lab1.Admin_Pages
 
             TStream.InsertStream(s_stream);
 
+            Response.Redirect("~/Admin/Streams");
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            App_Code.TStream.DeleteStream(Convert.ToInt32(txtStreamID.Text));
             Response.Redirect("~/Admin/Streams");
         }
     }

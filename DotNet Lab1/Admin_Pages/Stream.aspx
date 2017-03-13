@@ -60,6 +60,7 @@
 
 
     <asp:LinkButton ID="lbUpdate" runat="server" CssClass="btn" OnClick="btnUpdate_Click">Update Stream</asp:LinkButton><br /><br />
+    <asp:Button ID="btnDelete" runat="server" CssClass="btn" Text="Delete Player" OnClick="btnDelete_Click" /><br /><br />
     <asp:LinkButton ID="lbInsert" runat="server" CssClass="btn" OnClick="lbInsert_Click">Insert Stream</asp:LinkButton><br /><br />
     <asp:Button ID="btnCancel" runat="server" CssClass="col-lg-4 btn btn-default" Text="Cancel" CausesValidation="false" /><br />
     <asp:ValidationSummary ID="vsForm" ShowSummary="true" ShowMessageBox="true" runat="server" />

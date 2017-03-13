@@ -22,6 +22,7 @@ namespace DotNet_Lab1.Admin_Pages
 
                 if (battleTag != "0")
                 {
+                    //update statement
                     PlayerInformation info = new PlayerInformation(battleTag);
 
                     btnInsert.Visible = false;
@@ -39,7 +40,8 @@ namespace DotNet_Lab1.Admin_Pages
                 }
                 else if (battleTag == "0")
                 {
-
+                    //insert statement
+                    btnDelete.Visible = false;
                     btnUpdate.Visible = false;
                     txtPlayTime.Text = "";
                     txtBattleID.Text = "";
@@ -93,7 +95,13 @@ namespace DotNet_Lab1.Admin_Pages
 
             PlayerInformation.InsertPlayerInfo(p_info);
 
-            Response.Redirect("~/Admin/Streams");
+            Response.Redirect("~/Admin/Player-Infos");
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            App_Code.PlayerInformation.DeletePlayer(txtBattleTag.Text);
+            Response.Redirect("~/Admin/Player-Infos");
         }
     }
 }

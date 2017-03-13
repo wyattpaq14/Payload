@@ -18,7 +18,8 @@ namespace DotNet_Lab1.Admin_Pages
                 int userID = Convert.ToInt32(RouteData.Values["UserID"]);
 
                 if (userID > 0)
-                {
+                {  
+                    //update statement
                     App_Code.User user = new App_Code.User(userID);
 
 
@@ -31,6 +32,9 @@ namespace DotNet_Lab1.Admin_Pages
                 }
                 else if (userID <= 0)
                 {
+
+                    //insert statement
+                    btnDelete.Visible = false;
                     lblUserID.Visible = false;
                     txtUserID.Visible = false; 
                     txtUserID.Enabled = false;
@@ -87,6 +91,12 @@ namespace DotNet_Lab1.Admin_Pages
 
             App_Code.User.InsertUser(u_info);
 
+            Response.Redirect("~/Admin/Users");
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            App_Code.User.DeleteUser(Convert.ToInt32(txtUserID.Text));
             Response.Redirect("~/Admin/Users");
         }
     }

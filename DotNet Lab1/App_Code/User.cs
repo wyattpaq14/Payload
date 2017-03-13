@@ -322,6 +322,45 @@ namespace DotNet_Lab1.App_Code
             return isUpdated;
         }
 
+
+        public static bool DeleteUser(int userID)
+        {
+            SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["SQL Server"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("deleteUserByUserID", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@UserID", SqlDbType.Int).Value = userID;
+           
+
+
+            // Open the database connection and execute the command
+            try
+            {
+                //opens connection to database, most failures happen here
+                //check connection string for proper settings
+                cn.Open();
+
+                //data adapter object is trasport link between data source and 
+                //execute the non-query stored procedure
+                cmd.ExecuteNonQuery();
+                //id = Convert.ToInt32(cmd.Parameters["@BattleID"].Value);
+
+            }
+            catch (Exception exc)
+            {
+                //just put here to make debugging easier, can look at error directly
+                exc.ToString();
+            }
+            finally
+            {
+                //must always close connections
+                cn.Close();
+            }
+
+            bool isDeleted = false;
+            return isDeleted;
+        }
+
+
         #endregion
     }
 }

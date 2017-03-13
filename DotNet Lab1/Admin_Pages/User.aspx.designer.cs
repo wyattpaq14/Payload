@@ -175,6 +175,15 @@ namespace DotNet_Lab1.Admin_Pages {
         protected global::System.Web.UI.WebControls.LinkButton lbUpdate;
         
         /// <summary>
+        /// btnDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDelete;
+        
+        /// <summary>
         /// lbInsert control.
         /// </summary>
         /// <remarks>
