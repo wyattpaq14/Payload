@@ -28,6 +28,9 @@ namespace DotNet_Lab1
         //default variable
         public string heroName = "Ana";
 
+        public string selectedBattleTag = null;
+        public string searchString = null;
+        public string selectedBattleID = null;
         
 
 

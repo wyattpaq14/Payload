@@ -87,7 +87,7 @@
 
 
     <asp:Button ID="btnUpdate" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Update Player" OnClick="btnUpdate_Click" /><br /><br />
-    <asp:Button ID="btnDelete" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Delete Player" OnClick="btnDelete_Click" /><br /><br />
+    <asp:Button ID="btnDelete" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Delete Player" OnClick="btnDelete_Click" CausesValidation="false" /><br /><br />
     <asp:Button ID="btnInsert" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Insert Player" OnClick="btnInsert_Click" /><br /><br />
     <asp:Button ID="btnCancel" runat="server" CssClass="col-lg-4 btn btn-default" Text="Cancel" CausesValidation="false" PostBackUrl="~/Home" />
     <asp:ValidationSummary ID="vsForm" ShowSummary="true" ShowMessageBox="true" runat="server" />

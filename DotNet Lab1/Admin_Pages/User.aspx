@@ -82,7 +82,7 @@
 
 
     <asp:LinkButton ID="lbUpdate" runat="server" CssClass="btn" OnClick="lbUpdate_Click">Update User</asp:LinkButton><br /><br />
-    <asp:Button ID="btnDelete" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Delete Player" OnClick="btnDelete_Click" /><br /><br />
+    <asp:Button ID="btnDelete" runat="server" CssClass="col-lg-4 btn btn-default col-md-offset-2" Text="Delete User" OnClick="btnDelete_Click" CausesValidation="false" /><br /><br />
     <asp:LinkButton ID="lbInsert" runat="server" CssClass="btn" OnClick="lbInsert_Click">Insert User</asp:LinkButton><br /><br />
     <asp:Button ID="btnCancel" runat="server" CssClass="col-lg-4 btn btn-default" Text="Cancel" CausesValidation="false" PostBackUrl="~/Admin/Users" /><br />
     <asp:ValidationSummary ID="vsForm" ShowSummary="true" ShowMessageBox="true" runat="server" />
